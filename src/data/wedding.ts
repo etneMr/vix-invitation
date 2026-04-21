@@ -187,16 +187,16 @@
       {
         label: 'Tài khoản cô dâu',
         account: '123456789',
-        holder: 'HÀ NGỌC TÚ HÂN',
+        holder: 'NGUYEN BAO CHAU',
         bank: 'Ngân hàng A',
         qrPlaceholder: 'QR cô dâu',
       },
       {
         label: 'Tài khoản chú rể',
-        account: '987654321',
-        holder: 'NGUYỄN THANH THIÊN TRUNG',
-        bank: 'Ngân hàng B',
-        qrPlaceholder: 'QR chú rể',
+        account: '0978719683',
+        holder: 'TRUONG NGUYEN MINH QUANG',
+        bank: 'Ngân hàng Shinhan',
+        qrPlaceholder: 'https://drive.google.com/file/d/1McqtXVWPG2ateZs6Wj85Lp1LRlthSkkh/view?usp=drive_link',
       },
     ],
   }
