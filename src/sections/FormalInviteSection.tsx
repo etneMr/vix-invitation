@@ -164,7 +164,7 @@ export function FormalInviteSection() {
         <Reveal className="mt-12 space-y-2 font-sans text-sm text-neutral-700">
           <p>{eventMain.time}</p>
           <p className="font-medium text-neutral-900 text-[18px]">{eventMain.date}</p>
-          <div className="flex items-center gap-1 mt-4">
+          <div className="flex items-baseline gap-1 mt-4">
           <p className="font-medium">{eventMain.at}</p>
           <p className="font-medium text-[16px]" >{eventMain.place}</p>
           </div>
