@@ -63,7 +63,7 @@ export function MenuGiftSection() {
           Thực đơn đón tiếp
         </motion.h2>
         <p className="mt-2 font-sans text-[10px] font-semibold tracking-[0.4em] text-neutral-600">
-          TRUNG & HÂN
+          QUANG & CHÂU
         </p>
       </Reveal>
 

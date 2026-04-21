@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { couple, footerClosing } from '../data/wedding'
+import { couple, footerClosing, hotline } from '../data/wedding'
 import { Reveal } from '../components/Reveal'
 
 function FloatingHearts() {
@@ -78,6 +78,28 @@ export function FooterSection() {
         <p className="relative z-[1] mt-2 font-sans text-[10px] uppercase tracking-[0.35em] text-neutral-400">
           {footerClosing.tagline}
         </p>
+      </Reveal>
+
+      <Reveal className="mt-10 border-t border-neutral-200 pt-8">
+        <p className="text-center font-sans text-xs font-bold uppercase tracking-wide text-neutral-800">
+          {hotline.title}
+        </p>
+        <div className="mt-4 flex flex-col gap-3 font-sans text-sm text-neutral-700 sm:flex-row sm:justify-center sm:gap-10">
+          <a
+            href={`tel:${hotline.groom.phone.replace(/\s/g, '')}`}
+            className="flex flex-col items-center rounded-xl bg-neutral-50 px-4 py-3 transition hover:bg-neutral-100"
+          >
+            <span className="text-xs text-neutral-500">{hotline.groom.label}</span>
+            <span className="font-medium text-terracotta">{hotline.groom.phone}</span>
+          </a>
+          <a
+            href={`tel:${hotline.bride.phone.replace(/\s/g, '')}`}
+            className="flex flex-col items-center rounded-xl bg-neutral-50 px-4 py-3 transition hover:bg-neutral-100"
+          >
+            <span className="text-xs text-neutral-500">{hotline.bride.label}</span>
+            <span className="font-medium text-terracotta">{hotline.bride.phone}</span>
+          </a>
+        </div>
       </Reveal>
     </footer>
   )

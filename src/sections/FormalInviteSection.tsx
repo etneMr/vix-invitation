@@ -1,11 +1,9 @@
 import { motion } from 'framer-motion'
 import {
   couple,
-  dressCode,
   eventBridge,
   eventMain,
   family,
-  hotline,
   images,
   invite,
 } from '../data/wedding'
@@ -182,37 +180,6 @@ export function FormalInviteSection() {
             {eventBridge.lead}
           </p>
           <p className="mt-3 font-sans text-xs text-neutral-500">{eventBridge.hint}</p>
-        </Reveal>
-
-        <Reveal className="mt-8 text-center">
-          <p className="font-sans text-xs font-bold uppercase tracking-wide text-neutral-800">
-            {dressCode.title}
-          </p>
-          <p className="mx-auto mt-2 max-w-sm font-sans text-xs leading-relaxed text-neutral-600">
-            {dressCode.text}
-          </p>
-        </Reveal>
-
-        <Reveal className="mt-10 border-t border-neutral-200 pt-8">
-          <p className="text-center font-sans text-xs font-bold uppercase tracking-wide text-neutral-800">
-            {hotline.title}
-          </p>
-          <div className="mt-4 flex flex-col gap-3 font-sans text-sm text-neutral-700 sm:flex-row sm:justify-center sm:gap-10">
-            <a
-              href={`tel:${hotline.groom.phone.replace(/\s/g, '')}`}
-              className="flex flex-col items-center rounded-xl bg-neutral-50 px-4 py-3 transition hover:bg-neutral-100"
-            >
-              <span className="text-xs text-neutral-500">{hotline.groom.label}</span>
-              <span className="font-medium text-terracotta">{hotline.groom.phone}</span>
-            </a>
-            <a
-              href={`tel:${hotline.bride.phone.replace(/\s/g, '')}`}
-              className="flex flex-col items-center rounded-xl bg-neutral-50 px-4 py-3 transition hover:bg-neutral-100"
-            >
-              <span className="text-xs text-neutral-500">{hotline.bride.label}</span>
-              <span className="font-medium text-terracotta">{hotline.bride.phone}</span>
-            </a>
-          </div>
         </Reveal>
       </Reveal>
     </section>

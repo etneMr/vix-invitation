@@ -10,6 +10,7 @@ import { FormalInviteSection } from './sections/FormalInviteSection'
 import { VideoSection } from './sections/VideoSection'
 import { StoryTimelineSection } from './sections/StoryTimelineSection'
 import { GallerySection } from './sections/GallerySection'
+import { RsvpSection } from './sections/RsvpSection'
 import { ScheduleSection } from './sections/ScheduleSection'
 import { MenuGiftSection } from './sections/MenuGiftSection'
 import { FooterSection } from './sections/FooterSection'
@@ -127,6 +128,7 @@ function App() {
         <VideoSection />
         <StoryTimelineSection />
         <GallerySection />
+        <RsvpSection />
         <ScheduleSection />
         <MenuGiftSection />
         <FooterSection />

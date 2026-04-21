@@ -2,12 +2,12 @@
 export const WEDDING_ISO = '2026-12-15T09:00:00+07:00'
 
 export const couple = {
-  short: 'Trung & Hân',
-  groomShort: 'Trung Nguyễn',
-  brideShort: 'Gia Hân',
-  groomFull: 'Nguyễn Thanh Thiên Trung',
-  brideFull: 'Hà Ngọc Tú Hân',
-  displayPair: 'Thiên Trung & Tú Hân',
+  short: 'Quang & Châu',
+  groomShort: 'Minh Quang',
+  brideShort: 'Bảo Châu',
+  groomFull: 'Trương Nguyễn Minh Quang',
+  brideFull: 'Nguyễn Bảo Châu',
+  displayPair: 'Minh Quang & Bảo Châu',
 }
 
 export const hero = {
@@ -187,14 +187,14 @@ export const gift = {
     {
       label: 'Tài khoản cô dâu',
       account: '123456789',
-      holder: 'HÀ NGỌC TÚ HÂN',
+      holder: 'NGUYỄN BẢO CHÂU',
       bank: 'Ngân hàng A',
       qrPlaceholder: 'QR cô dâu',
     },
     {
       label: 'Tài khoản chú rể',
       account: '987654321',
-      holder: 'NGUYỄN THANH THIÊN TRUNG',
+      holder: 'TRƯƠNG NGUYỄN MINH QUANG',
       bank: 'Ngân hàng B',
       qrPlaceholder: 'QR chú rể',
     },
@@ -205,8 +205,7 @@ export const rsvp = {
   title: 'Xác nhận tham dự',
   subtitle:
     'Gia đình rất mong nhận được phản hồi của bạn trước ngày 01 tháng 12 năm 2026 để tiện sắp xếp chỗ ngồi.',
-  note: 'Điền thông tin và gửi — thư sẽ mở ứng dụng email của bạn (không cần máy chủ).',
-  emailTo: 'thiepcuoitrunghan@example.com',
+  note: 'Điền thông tin và gửi — phản hồi sẽ được chuyển trực tiếp đến Telegram của gia đình.',
   deadline: 'Hạn phản hồi: 01/12/2026',
 }
 
