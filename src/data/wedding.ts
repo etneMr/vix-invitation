@@ -16,7 +16,7 @@
 
   export const groomIntro = {
     quote:
-      'Gặp được em là điều tuyệt vời nhất anh từng mơ. Cảm ơn em đã đến và làm cuộc đời anh trọn vẹn hơn mỗi ngày.',
+      'Thật tuyệt với khi chúng ta tìm thấy và là một phần của cuộc đời nhau. Anh mong đoạn đường sắp tới của chúng ta sẽ luôn là tuyệt vời nhất',
   }
 
   export const brideIntro = {
@@ -27,7 +27,7 @@
   export const family = {
     groom: {
       title: 'NHÀ TRAI',
-      lines: ['Ông: Trương Văn Tiên', 'Bà: Ngô Thu Ngân'],
+      lines: ['Ông: Trương Văn Tiên', 'Bà: Nguyễn Thị Hết'],
     },
     bride: {
       title: 'NHÀ GÁI',
@@ -43,13 +43,13 @@
 
   /** Lễ tại nhà trai (buổi sáng) — khác với tiệc nhà hàng buổi tối */
   export const eventMain = {
-    time: 'Tổ chức vào lúc 13 giờ 00',
+    time: 'Tổ chức vào lúc 18 giờ 00',
     date: 'Thứ Bảy, ngày 12 tháng 12 năm 2026',
     lunar:
       '(Tức ngày 04 tháng 11 năm Bính Ngọ — vui lòng đối chiếu lịch âm chính thức)',
-    at: 'Tại gia đình Nhà Trai:',
+    at: 'Tại nhà hàng Luxury palace:',
     address:
-      'Phan văn trị,Phường An Nhơn (Quận Gò Vấp cũ), TPHCM, Việt Nam',
+      '171 Đ. Nguyễn Thái Sơn, Hạnh Thông, Hồ Chí Minh',
     closing:
       'Sự hiện diện của Quý khách là niềm vinh hạnh của gia đình chúng tôi!',
   }
@@ -132,24 +132,24 @@
 
   export const schedule = [
     {
-      title: 'Làm lễ',
+      title: 'Lễ ăn hỏi',
       image:
         'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=500&h=500&fit=crop&q=80',
       dateLine: 'Thứ Hai,12 tháng 12, 2026',
-      time: '5:30 chiều – 6:00 chiều',
-      venue: 'Nhà hàng tiệc cưới Luxury',
-      address: '171 Đ. Nguyễn Thái Sơn, Hạnh Thông, Hồ Chí Minh, Việt Nam)',
-      phone: 'Sđt: 02835882288',
-      mapsUrl: 'https://maps.app.goo.gl/UBLroQQkZwVcnYfK6',
+      time: '1:00 chiều – 4:00 chiều',
+      venue: 'Tại gia đình nhà Trai',
+      address: '497/22 Đ. Phan Văn Trị, Phường 10, Gò Vấp, Hồ Chí Minh, Việt Nam',
+      phone: 'Sđt: 0978719683',
+      mapsUrl: 'https://maps.app.goo.gl/x7ptzUUNyjNPAZgU6',
     },
     {
-      title: 'Nhập tiệc',
+      title: 'Tiệc cưới',
       image:
         'https://images.unsplash.com/photo-1529636798458-92182e662485?w=500&h=500&fit=crop&q=80',
       dateLine: 'Thứ Hai,12 tháng 12, 2026',
-      time: '6:30 chiều – 9:00 chiều',
+      time: '6:00 chiều – 9:00 chiều',
       venue: 'Nhà hàng tiệc cưới Luxury',
-      address: '171 Đ. Nguyễn Thái Sơn, Hạnh Thông, Hồ Chí Minh, Việt Nam)',
+      address: '171 Đ. Nguyễn Thái Sơn, Hạnh Thông, Hồ Chí Minh',
       phone: 'Sđt: 02835882288',
       mapsUrl: 'https://maps.google.com',
     },
@@ -174,7 +174,7 @@
     },
     {
       name: 'ĐỒ UỐNG',
-      items: ['Nước có ga', 'Bia Tiger'],
+      items: ['Nước có ga', 'Bia Tiger','Nước lọc'],
     },
   ]
 
@@ -206,7 +206,7 @@
     subtitle:
       'Gia đình rất mong nhận được phản hồi của bạn trước ngày 25 tháng 11 năm 2026 để tiện sắp xếp chỗ ngồi.',
     note: 'Điền thông tin và gửi — thư sẽ mở ứng dụng email của bạn (không cần máy chủ).',
-    emailTo: 'thiepcuoitrunghan@example.com',
+    emailTo: '',
     deadline: 'Hạn phản hồi: 25/11/2026',
   }
 
