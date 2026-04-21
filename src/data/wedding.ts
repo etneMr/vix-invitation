@@ -196,7 +196,7 @@
         account: '0978719683',
         holder: 'TRUONG NGUYEN MINH QUANG',
         bank: 'Ngân hàng Shinhan',
-        qrPlaceholder: 'https://drive.google.com/file/d/1McqtXVWPG2ateZs6Wj85Lp1LRlthSkkh/view?usp=drive_link',
+        qrPlaceholder: 'https://lh3.googleusercontent.com/d/1McqtXVWPG2ateZs6Wj85Lp1LRlthSkkh/view?usp=drive_link',
       },
     ],
   }
