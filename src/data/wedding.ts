@@ -218,7 +218,7 @@
 
   export const images = {
     countdownBg:
-      'https://drive.google.com/file/d/1CKbjX_RCpRlIDkhfx2sjwBcyonzL6WmE',
+      'https://drive.google.com/file/d/1CKbjX_RCpRlIDkhfx2sjwBcyonzL6WmE/view?usp=sharing',
     coupleOverlapLeft:
       'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=400&h=400&fit=crop&q=80',
     coupleOverlapRight:
