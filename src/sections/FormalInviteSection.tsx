@@ -163,8 +163,7 @@ export function FormalInviteSection() {
 
         <Reveal className="mt-12 space-y-2 font-sans text-sm text-neutral-700">
           <p>{eventMain.time}</p>
-          <p className="font-medium text-neutral-900">{eventMain.date}</p>
-          <p className="text-xs text-neutral-500">{eventMain.lunar}</p>
+          <p className="font-medium text-neutral-900 text-[18px]">{eventMain.date}</p>
           <p className="mt-4 font-medium">{eventMain.at}</p>
           <p className="text-neutral-600">{eventMain.address}</p>
           <p className="mt-6 font-script text-lg italic text-neutral-800">

@@ -16,7 +16,7 @@
 
   export const groomIntro = {
     quote:
-      'Thật tuyệt với khi chúng ta tìm thấy và là một phần của cuộc đời nhau. Anh mong đoạn đường sắp tới của chúng ta sẽ luôn là tuyệt vời nhất',
+      'Thật tuyệt với khi chúng ta tìm thấy và là một phần của cuộc đời nhau. Anh mong đoạn đường sắp tới của chúng ta sẽ luôn là tuyệt vời nhất. ',
   }
 
   export const brideIntro = {
@@ -43,10 +43,8 @@
 
   /** Lễ tại nhà trai (buổi sáng) — khác với tiệc nhà hàng buổi tối */
   export const eventMain = {
-    time: 'Tổ chức vào lúc 18 giờ 00',
-    date: 'Thứ Bảy, ngày 12 tháng 12 năm 2026',
-    lunar:
-      '(Tức ngày 04 tháng 11 năm Bính Ngọ — vui lòng đối chiếu lịch âm chính thức)',
+    time: 'Tổ chức vào lúc 18 giờ 00 thứ Bảy',
+    date: '12.12.2026',
     at: 'Tại nhà hàng Luxury palace:',
     address:
       '171 Đ. Nguyễn Thái Sơn, Hạnh Thông, Hồ Chí Minh',
@@ -110,6 +108,15 @@
       leaves: 'left',
     },
     {
+      date: '02 tháng 11, 2020',
+      title: 'Cùng nhau đồng hành',
+      body: 'Biển xanh, cát trắng và những lời chân thành — chúng mình chọn cùng nhau viết tiếp những trang mới.',
+      image:
+        'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&h=600&fit=crop&q=80',
+      layout: 'circle',
+      leaves: 'left',
+    },
+    {
       date: '15 tháng 12, 2026',
       title: 'Đám cưới',
       body: 'Hôm nay chúng mình chính thức về chung một nhà. Cảm ơn bạn đã là một phần trong kỷ niệm đẹp này.',
@@ -132,7 +139,7 @@
 
   export const schedule = [
     {
-      title: 'Lễ ăn hỏi',
+      title: 'Lễ rước dâu',
       image:
         'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=500&h=500&fit=crop&q=80',
       dateLine: 'Thứ Hai,12 tháng 12, 2026',
