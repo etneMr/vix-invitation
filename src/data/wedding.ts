@@ -45,7 +45,8 @@
   export const eventMain = {
     time: 'Tổ chức vào lúc 18 giờ 00 thứ Bảy',
     date: '12.12.2026',
-    at: 'Tại nhà hàng Luxury palace:',
+    at: 'Tại nhà hàng ',
+    place:'Luxury palace: ',
     address:
       '171 Đ. Nguyễn Thái Sơn, Hạnh Thông, Hồ Chí Minh',
     closing:
