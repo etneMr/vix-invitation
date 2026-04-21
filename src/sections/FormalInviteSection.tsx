@@ -166,7 +166,7 @@ export function FormalInviteSection() {
           <p className="font-medium text-neutral-900 text-[18px]">{eventMain.date}</p>
           <div className="flex items-center gap-2">
           <p className="mt-4 font-medium">{eventMain.at}</p>
-          <p className="fmt-4 font-medium text-[16px]" >{eventMain.place}</p>
+          <p className="mt-4 font-medium text-[16px]" >{eventMain.place}</p>
           </div>
           <p className="text-neutral-600">{eventMain.address}</p>
           <p className="mt-6 font-script text-lg italic text-neutral-800">
