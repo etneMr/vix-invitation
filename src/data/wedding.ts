@@ -48,18 +48,11 @@
     at: 'Tại nhà hàng ',
     place:'Luxury palace: ',
     address:
-      '171 Đ. Nguyễn Thái Sơn, Hạnh Thông, Hồ Chí Minh',
-    closing:
-      'Sự hiện diện của Quý khách là niềm vinh hạnh của gia đình chúng tôi!',
+      '171 Đ. Nguyễn Thái Sơn, Hạnh Thông, Hồ Chí Minh'
+
   }
 
   /** Nối mạch giữa lễ nhà và tiệc nhà hàng (nội dung thường có trên thiệp điện tử) */
-  export const eventBridge = {
-    title: 'Buổi tối cùng ngày',
-    lead:
-      'Sau lễ thành hôn tại nhà trai, gia đình và hai con trân trọng kính mời Quý khách tới dự tiệc mừng tại nhà hàng Luxury Palace.',
-    hint: 'Giờ giấc, địa chỉ và bản đồ chi tiết xem mục Làm lễ & Nhập tiệc phía dưới.',
-  }
 
   export const dressCode = {
     title: 'Trang phục gợi ý',

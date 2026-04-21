@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import {
   couple,
-  eventBridge,
   eventMain,
   family,
   images,
@@ -95,7 +94,7 @@ export function FormalInviteSection() {
 
         <RevealStagger className="mt-12 grid grid-cols-1 gap-4 text-center sm:grid-cols-2 sm:gap-5">
           <RevealItem>
-            <div className="rounded-2xl border border-skyline/60 bg-cream/60 px-4 py-5 shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
+            <div className="rounded-2xl border border-skyline/60 bg-[#007FFF]/10 px-4 py-5 shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
               <p className="font-sans text-[11px] font-bold uppercase tracking-[0.18em] text-neutral-900">
                 {family.groom.title}
               </p>
@@ -111,7 +110,7 @@ export function FormalInviteSection() {
             </div>
           </RevealItem>
           <RevealItem>
-            <div className="rounded-2xl border border-skyline/60 bg-cream/60 px-4 py-5 shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
+            <div className="rounded-2xl border border-skyline/60 bg-[#007FFF]/10 px-4 py-5 shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
               <p className="font-sans text-[11px] font-bold uppercase tracking-[0.18em] text-neutral-900">
                 {family.bride.title}
               </p>
@@ -161,7 +160,7 @@ export function FormalInviteSection() {
           </p>
         </Reveal>
 
-        <Reveal className="mt-12 space-y-2 font-sans text-sm text-neutral-700">
+        <Reveal className="mt-12 space-y-2 font-sans text-sm text-neutral-700 rounded-2xl border border-skyline/70 bg-[#007FFF]/10 px-5 py-6">
           <p>{eventMain.time}</p>
           <p className="font-medium text-neutral-900 text-[18px]">{eventMain.date}</p>
           <div className="flex items-center justify-center gap-1 mt-4 ">
@@ -173,15 +172,7 @@ export function FormalInviteSection() {
           <p className="text-neutral-600">{eventMain.address}</p>
         </Reveal>
 
-        <Reveal className="mt-10 rounded-2xl border border-skyline/70 bg-cream/80 px-5 py-6 text-left">
-          <p className="font-sans text-xs font-bold uppercase tracking-wide text-terracotta">
-            {eventBridge.title}
-          </p>
-          <p className="mt-2 font-sans text-sm leading-relaxed text-neutral-700">
-            {eventBridge.lead}
-          </p>
-          <p className="mt-3 font-sans text-xs text-neutral-500">{eventBridge.hint}</p>
-        </Reveal>
+
       </Reveal>
     </section>
   )
