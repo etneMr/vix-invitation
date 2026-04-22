@@ -60,7 +60,7 @@ function ChibiThankYouAnimation() {
           <p className="mt-2 text-xs font-medium uppercase tracking-wider text-sage">Bảo Châu</p>
         </div>
         <div className="[animation-delay:120ms]">
-          <ChibiCharacter type="groom" imageUrl="/public/bridge-sticker.png" />
+          <ChibiCharacter type="groom" imageUrl="/bridge-sticker.png" />
           <p className="mt-2 text-xs font-medium uppercase tracking-wider text-sage">Minh Quang</p>
         </div>
       </div>
@@ -223,7 +223,7 @@ export function RsvpSection() {
           {submitFeedback && (
             <p className="text-center font-sans text-sm text-neutral-700">{submitFeedback}</p>
           )}
-          {true && <ChibiThankYouAnimation />}
+          { <ChibiThankYouAnimation />}
 
           <div className="flex justify-center">
             <button
