@@ -1,5 +1,5 @@
   /** Ngày giờ đại lễ — đổi tại đây để countdown & nội dung khớp */
-  export const WEDDING_ISO = '2026-12-15T09:00:00+07:00'
+  export const WEDDING_ISO = '2026-12-12T09:00:00+07:00'
 
   export const couple = {
     short: 'Quang & Châu',
@@ -197,7 +197,7 @@
         account: '0978719683',
         holder: 'TRUONG NGUYEN MINH QUANG',
         bank: 'Ngân hàng Shinhan',
-        qrPlaceholder: 'https://lh3.googleusercontent.com/d/1McqtXVWPG2ateZs6Wj85Lp1LRlthSkkh/view?usp=drive_link',
+        qrPlaceholder: '/QR-groom.jpg',
       },
     ],
   }
@@ -219,7 +219,7 @@
 
   export const images = {
     countdownBg:
-      'https://lh3.googleusercontent.com/d/1CKbjX_RCpRlIDkhfx2sjwBcyonzL6WmE?w=1400&h=900&fit=crop&q=80',
+      '/Save-date.JPG',
     coupleOverlapLeft:
       'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=400&h=400&fit=crop&q=80',
     coupleOverlapRight:
