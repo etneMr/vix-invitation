@@ -190,7 +190,7 @@
         account: '123456789',
         holder: 'NGUYEN BAO CHAU',
         bank: 'Ngân hàng A',
-        qrPlaceholder: 'QR cô dâu',
+        qrPlaceholder: 'https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=1200&h=675&fit=crop&q=80',
       },
       {
         label: 'Tài khoản chú rể',
@@ -206,7 +206,7 @@
     title: 'Xác nhận tham dự',
     subtitle:
       'Gia đình rất mong nhận được phản hồi của bạn trước ngày 25 tháng 11 năm 2026 để tiện sắp xếp chỗ ngồi.',
-    note: 'Điền thông tin và gửi — thư sẽ mở ứng dụng email của bạn (không cần máy chủ).',
+    note: 'Điền thông tin và gửi phản hồi đến gia đình chúng tôi.',
     emailTo: '',
     deadline: 'Hạn phản hồi: 25/11/2026',
   }

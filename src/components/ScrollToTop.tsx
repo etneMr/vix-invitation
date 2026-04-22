@@ -22,7 +22,7 @@ export function ScrollToTop() {
           whileHover={{ scale: 1.06 }}
           whileTap={{ scale: 0.95 }}
           transition={{ type: 'spring', stiffness: 400, damping: 22 }}
-          className="fixed right-4 top-4 z-50 flex h-11 w-11 items-center justify-center rounded-lg bg-violet-600 text-white shadow-lg shadow-violet-900/25"
+          className="fixed right-4 bottom-4 z-50 flex h-11 w-11 items-center justify-center rounded-lg bg-violet-600 text-white shadow-lg shadow-violet-900/25"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           aria-label="Lên đầu trang"
         >

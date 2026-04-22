@@ -39,6 +39,44 @@ function App() {
   }, [isEnvelopeOpen, invitationBgSlides.length])
 
   useEffect(() => {
+    if (isEnvelopeOpen) return
+
+    const { body, documentElement } = document
+    const scrollY = window.scrollY
+
+    const previousBodyStyle = {
+      overflow: body.style.overflow,
+      position: body.style.position,
+      top: body.style.top,
+      width: body.style.width,
+      touchAction: body.style.touchAction,
+    }
+    const previousHtmlStyle = {
+      overflow: documentElement.style.overflow,
+      scrollBehavior: documentElement.style.scrollBehavior,
+    }
+
+    body.style.overflow = 'hidden'
+    body.style.position = 'fixed'
+    body.style.top = `-${scrollY}px`
+    body.style.width = '100%'
+    body.style.touchAction = 'none'
+    documentElement.style.overflow = 'hidden'
+    documentElement.style.scrollBehavior = 'auto'
+
+    return () => {
+      body.style.overflow = previousBodyStyle.overflow
+      body.style.position = previousBodyStyle.position
+      body.style.top = previousBodyStyle.top
+      body.style.width = previousBodyStyle.width
+      body.style.touchAction = previousBodyStyle.touchAction
+      documentElement.style.overflow = previousHtmlStyle.overflow
+      documentElement.style.scrollBehavior = previousHtmlStyle.scrollBehavior
+      window.scrollTo(0, scrollY)
+    }
+  }, [isEnvelopeOpen])
+
+  useEffect(() => {
     let lastSpawnAt = 0
 
     const onMouseMove = (event: MouseEvent) => {
@@ -115,24 +153,24 @@ function App() {
       </AnimatePresence>
       <div className="relative z-10">
         <ScrollToTop />
-      <motion.main
-        initial={{ opacity: 0, y: 24, scale: 0.99 }}
-        animate={isEnvelopeOpen ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 24, scale: 0.99 }}
-        transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
-        className="mx-auto max-w-lg shadow-sm shadow-black/5 lg:max-w-lg lg:border-x lg:border-neutral-200/80"
-      >
-        <HeroSection />
-        <CountdownSection />
-        <CoupleIntroSection />
-        <FormalInviteSection />
-        <VideoSection />
-        <StoryTimelineSection />
-        <GallerySection />
-        <RsvpSection />
-        <ScheduleSection />
-        <MenuGiftSection />
-        <FooterSection />
-      </motion.main>
+        <motion.main
+          initial={{ opacity: 0, y: 24, scale: 0.99 }}
+          animate={isEnvelopeOpen ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 24, scale: 0.99 }}
+          transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+          className="mx-auto max-w-lg shadow-sm shadow-black/5 lg:max-w-lg lg:border-x lg:border-neutral-200/80"
+        >
+          <HeroSection />
+          <CountdownSection />
+          <CoupleIntroSection />
+          <FormalInviteSection />
+          <VideoSection />
+          <StoryTimelineSection />
+          <GallerySection />
+          <RsvpSection />
+          <ScheduleSection />
+          <MenuGiftSection />
+          <FooterSection />
+        </motion.main>
       </div>
     </div>
   )

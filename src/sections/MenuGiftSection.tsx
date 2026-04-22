@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { gift, menuCategories, schedule } from '../data/wedding'
+import { gift, menuCategories } from '../data/wedding'
 import {
   Reveal,
   RevealItem,
@@ -10,9 +10,8 @@ function FoliageCorner({ position }: { position: 'tr' | 'bl' }) {
   const isTr = position === 'tr'
   return (
     <motion.div
-      className={`pointer-events-none absolute h-36 w-36 rounded-full bg-gradient-to-br from-emerald-700/35 via-emerald-600/15 to-transparent blur-md ${
-        isTr ? '-right-10 -top-10' : '-bottom-10 -left-10'
-      }`}
+      className={`pointer-events-none absolute h-36 w-36 rounded-full bg-gradient-to-br from-emerald-700/35 via-emerald-600/15 to-transparent blur-md ${isTr ? '-right-10 -top-10' : '-bottom-10 -left-10'
+        }`}
       initial={{ opacity: 0, scale: 0.85 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
@@ -22,30 +21,20 @@ function FoliageCorner({ position }: { position: 'tr' | 'bl' }) {
   )
 }
 
-function QrPlaceholder({ label }: { label: string }) {
+function QrPlaceholder({ qrCodeUrl }: { qrCodeUrl: string }) {
   return (
     <div className="mx-auto flex aspect-square w-44 items-center justify-center rounded-lg border-2 border-dashed border-neutral-300 bg-neutral-50 text-center font-sans text-xs text-neutral-400">
-      {label}
+      <img src={qrCodeUrl} alt="QR Code" className="p-1 w-full h-full object-contain" />
     </div>
   )
 }
 
 export function MenuGiftSection() {
-  const mapsUrl = schedule[0]?.mapsUrl ?? '#'
-
   return (
     <section className="relative overflow-hidden border-x-2 border-skyline/50 bg-white px-5 pb-20 pt-4 sm:mx-auto sm:max-w-lg sm:border-x">
       <FoliageCorner position="tr" />
 
       <Reveal className="relative z-[1] text-center">
-        <a
-          href={mapsUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="font-sans text-xs underline decoration-neutral-400 underline-offset-4"
-        >
-          Xem vị trí
-        </a>
         <motion.div
           className="mx-auto mt-6 h-14 max-w-xs bg-gradient-to-r from-transparent via-emerald-700/30 to-transparent"
           initial={{ opacity: 0, x: -20 }}
@@ -121,7 +110,7 @@ export function MenuGiftSection() {
                 Ngân hàng: {acc.bank}
               </p>
               <div className="mt-6">
-                <QrPlaceholder label={acc.qrPlaceholder} />
+                <QrPlaceholder qrCodeUrl={acc.qrPlaceholder} />
               </div>
             </div>
           ))}
