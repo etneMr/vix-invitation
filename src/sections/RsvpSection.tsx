@@ -56,7 +56,7 @@ function ChibiThankYouAnimation() {
       </div>
       <div className="flex items-end justify-center gap-6">
         <div className="[animation-delay:60ms]">
-          <ChibiCharacter type="bride" imageUrl="/public/bridge-sticker.png" />
+          <ChibiCharacter type="bride" imageUrl="/bridge-sticker.png" />
           <p className="mt-2 text-xs font-medium uppercase tracking-wider text-sage">Bảo Châu</p>
         </div>
         <div className="[animation-delay:120ms]">
