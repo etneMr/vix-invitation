@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { galleryPhotos } from '../data/wedding'
+import { CollapsibleSection } from '../components/CollapsibleSection'
 import { Reveal } from '../components/Reveal'
 
 export function GallerySection() {
@@ -15,7 +16,13 @@ export function GallerySection() {
         </p>
       </Reveal>
 
-      <div className="mx-auto mt-10 grid max-w-lg grid-cols-2 gap-2 sm:gap-3">
+      <CollapsibleSection
+        className="mx-auto mt-10 max-w-lg"
+        contentClassName="grid grid-cols-2 gap-2 sm:gap-3"
+        previewCount={2}
+        expandLabel="Xem thêm ảnh"
+        collapseLabel="Thu gọn ảnh"
+      >
         {galleryPhotos.map((src, i) => (
           <Reveal key={src}>
             <motion.div
@@ -32,7 +39,7 @@ export function GallerySection() {
             </motion.div>
           </Reveal>
         ))}
-      </div>
+      </CollapsibleSection>
     </section>
   )
 }

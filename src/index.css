@@ -38,3 +38,30 @@ body {
     transform: translate(-50%, -120%) scale(0.65);
   }
 }
+
+.volume-slider {
+  appearance: none;
+  height: 3px;
+  border-radius: 9999px;
+  background: rgb(255 255 255 / 0.35);
+  outline: none;
+}
+
+.volume-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  border: 2px solid rgb(255 255 255 / 0.9);
+  background: #fff;
+  cursor: pointer;
+}
+
+.volume-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  border: 2px solid rgb(255 255 255 / 0.9);
+  background: #fff;
+  cursor: pointer;
+}

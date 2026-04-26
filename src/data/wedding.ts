@@ -227,5 +227,5 @@
     bouquet:
       'https://images.unsplash.com/photo-1526047932273-341f2a7631f9?w=300&h=300&fit=crop&q=80',
     videoCover:
-      'https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=1200&h=675&fit=crop&q=80',
+      '/wedding-vid.mp4',
   }

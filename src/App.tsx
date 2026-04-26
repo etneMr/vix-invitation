@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { galleryPhotos, images } from './data/wedding'
 import { EnvelopeSplash } from './components/EnvelopeSplash'
 import { ScrollToTop } from './components/ScrollToTop'
+import { SoundControl } from './components/SoundControl'
 import { HeroSection } from './sections/HeroSection'
 import { CountdownSection } from './sections/CountdownSection'
 import { CoupleIntroSection } from './sections/CoupleIntroSection'
@@ -18,6 +19,7 @@ import { FooterSection } from './sections/FooterSection'
 function App() {
   const [isEnvelopeOpen, setIsEnvelopeOpen] = useState(false)
   const [activeBgIndex, setActiveBgIndex] = useState(0)
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false)
 
   const invitationBgSlides = [
     images.countdownBg,
@@ -163,7 +165,7 @@ function App() {
           <CountdownSection />
           <CoupleIntroSection />
           <FormalInviteSection />
-          <VideoSection />
+          <VideoSection onVideoPlayingChange={setIsVideoPlaying} />
           <StoryTimelineSection />
           <GallerySection />
           <RsvpSection />
@@ -172,6 +174,7 @@ function App() {
           <FooterSection />
         </motion.main>
       </div>
+      <SoundControl canPlay={isEnvelopeOpen} forceMuted={isVideoPlaying} />
     </div>
   )
 }
