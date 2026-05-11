@@ -1,7 +1,10 @@
-import { motion } from 'framer-motion'
+import { useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 import { storyLead, timeline } from '../data/wedding'
 import type { TimelineItem } from '../data/wedding'
 import { Reveal } from '../components/Reveal'
+
+const PREVIEW_COUNT = 1
 
 function LeafCluster({ side }: { side: 'left' | 'right' }) {
   return (
@@ -105,6 +108,11 @@ function TimelineBlock({ item }: { item: TimelineItem }) {
 }
 
 export function StoryTimelineSection() {
+  const [expanded, setExpanded] = useState(false)
+  const visibleItems = timeline.slice(0, PREVIEW_COUNT)
+  const hiddenItems = timeline.slice(PREVIEW_COUNT)
+  const hasMore = hiddenItems.length > 0
+
   return (
     <section className="border-x-2 border-skyline/50 bg-[#f9f9f9] px-4 py-16 sm:mx-auto sm:max-w-lg sm:border-x">
       <Reveal className="text-center">
@@ -117,10 +125,60 @@ export function StoryTimelineSection() {
       </Reveal>
 
       <div className="mx-auto mt-14 max-w-md space-y-16">
-        {timeline.map((item) => (
+        {visibleItems.map((item) => (
           <TimelineBlock key={item.title} item={item} />
         ))}
+
+        <AnimatePresence initial={false}>
+          {expanded && hasMore && (
+            <motion.div
+              key="story-collapse"
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: 'auto', opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+              className="overflow-hidden"
+            >
+              <div className="space-y-16 pt-16">
+                {hiddenItems.map((item) => (
+                  <TimelineBlock key={item.title} item={item} />
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
+
+      {hasMore && (
+        <div className="mt-12 flex justify-center">
+          <button
+            type="button"
+            onClick={() => setExpanded((v) => !v)}
+            aria-expanded={expanded}
+            className="group inline-flex items-center gap-2 rounded-full border border-gold/40 bg-white/70 px-5 py-2 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-gold shadow-sm shadow-black/5 transition hover:bg-gold hover:text-white"
+          >
+            <span>
+              {expanded ? 'Thu gọn' : 'Xem thêm câu chuyện'}
+            </span>
+            <motion.svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              animate={{ rotate: expanded ? 180 : 0 }}
+              transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+              aria-hidden
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </motion.svg>
+          </button>
+        </div>
+      )}
     </section>
   )
 }
