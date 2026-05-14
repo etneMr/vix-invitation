@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion'
-import { gift, menuCategories } from '../data/wedding'
+import { gift } from '../data/wedding'
 import {
   Reveal,
-  RevealItem,
-  RevealStagger,
+  // RevealItem,
+  // RevealStagger,
 } from '../components/Reveal'
 
 function FoliageCorner({ position }: { position: 'tr' | 'bl' }) {
@@ -33,7 +33,7 @@ export function MenuGiftSection() {
   return (
     <section className="relative overflow-hidden border-x-2 border-skyline/50 bg-white px-5 pb-20 pt-4 sm:mx-auto sm:max-w-lg sm:border-x">
       <FoliageCorner position="tr" />
-
+{/* 
       <Reveal className="relative z-[1] text-center">
         <motion.div
           className="mx-auto mt-6 h-14 max-w-xs bg-gradient-to-r from-transparent via-emerald-700/30 to-transparent"
@@ -77,7 +77,7 @@ export function MenuGiftSection() {
             </ul>
           </RevealItem>
         ))}
-      </RevealStagger>
+      </RevealStagger> */}
 
       <FoliageCorner position="bl" />
 

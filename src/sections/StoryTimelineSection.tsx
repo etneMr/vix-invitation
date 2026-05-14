@@ -4,8 +4,6 @@ import { storyLead, timeline } from '../data/wedding'
 import type { TimelineItem } from '../data/wedding'
 import { Reveal } from '../components/Reveal'
 
-const PREVIEW_COUNT = 1
-
 function LeafCluster({ side }: { side: 'left' | 'right' }) {
   return (
     <motion.div
@@ -65,6 +63,38 @@ function CirclePhoto({
   )
 }
 
+function WidePhoto({ image }: { image: string }) {
+  return (
+    <motion.div
+      className="relative mt-8 overflow-hidden rounded-xl"
+      whileHover={{ scale: 1.02 }}
+      transition={{ type: 'spring', stiffness: 260, damping: 22 }}
+    >
+      <img src={image} alt="" className="aspect-[16/10] w-full object-cover" />
+    </motion.div>
+  )
+}
+
+function PreviewStoryImage({ item }: { item: TimelineItem }) {
+  return (
+    <Reveal>
+      {item.layout === 'wide' ? (
+        <WidePhoto image={item.image} />
+      ) : (
+        <CirclePhoto image={item.image} leaves={item.leaves} />
+      )}
+    </Reveal>
+  )
+}
+
+function PreviewStoryContent({ item }: { item: TimelineItem }) {
+  return (
+    <Reveal>
+      <MilestoneCard date={item.date} title={item.title} body={item.body} />
+    </Reveal>
+  )
+}
+
 function TimelineBlock({ item }: { item: TimelineItem }) {
   const circle = item.layout === 'circle'
   const imageFirst = circle && item.imageFirst
@@ -90,17 +120,7 @@ function TimelineBlock({ item }: { item: TimelineItem }) {
       {item.layout === 'wide' && (
         <>
           <MilestoneCard date={item.date} title={item.title} body={item.body} />
-          <motion.div
-            className="relative mt-8 overflow-hidden rounded-xl"
-            whileHover={{ scale: 1.02 }}
-            transition={{ type: 'spring', stiffness: 260, damping: 22 }}
-          >
-            <img
-              src={item.image}
-              alt=""
-              className="aspect-[16/10] w-full object-cover"
-            />
-          </motion.div>
+          <WidePhoto image={item.image} />
         </>
       )}
     </Reveal>
@@ -109,9 +129,11 @@ function TimelineBlock({ item }: { item: TimelineItem }) {
 
 export function StoryTimelineSection() {
   const [expanded, setExpanded] = useState(false)
-  const visibleItems = timeline.slice(0, PREVIEW_COUNT)
-  const hiddenItems = timeline.slice(PREVIEW_COUNT)
-  const hasMore = hiddenItems.length > 0
+  const previewIndex = timeline.findIndex((item) => item.imageFirst)
+  const resolvedPreviewIndex = previewIndex >= 0 ? previewIndex : 0
+  const previewItem = timeline[resolvedPreviewIndex]
+  const hiddenItems = timeline.filter((_, index) => index !== resolvedPreviewIndex)
+  const hasHiddenContent = Boolean(previewItem)
 
   return (
     <section className="border-x-2 border-skyline/50 bg-[#f9f9f9] px-4 py-16 sm:mx-auto sm:max-w-lg sm:border-x">
@@ -125,12 +147,10 @@ export function StoryTimelineSection() {
       </Reveal>
 
       <div className="mx-auto mt-14 max-w-md space-y-16">
-        {visibleItems.map((item) => (
-          <TimelineBlock key={item.title} item={item} />
-        ))}
+        {previewItem && <PreviewStoryImage item={previewItem} />}
 
         <AnimatePresence initial={false}>
-          {expanded && hasMore && (
+          {expanded && previewItem && (
             <motion.div
               key="story-collapse"
               initial={{ height: 0, opacity: 0 }}
@@ -139,7 +159,8 @@ export function StoryTimelineSection() {
               transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
               className="overflow-hidden"
             >
-              <div className="space-y-16 pt-16">
+              <div className="space-y-16 pt-10">
+                <PreviewStoryContent item={previewItem} />
                 {hiddenItems.map((item) => (
                   <TimelineBlock key={item.title} item={item} />
                 ))}
@@ -149,7 +170,7 @@ export function StoryTimelineSection() {
         </AnimatePresence>
       </div>
 
-      {hasMore && (
+      {hasHiddenContent && (
         <div className="mt-12 flex justify-center">
           <button
             type="button"
