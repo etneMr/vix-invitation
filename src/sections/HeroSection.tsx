@@ -36,58 +36,6 @@ function Flourish({ flip }: { flip?: boolean }) {
     </motion.svg>
   )
 }
-function WreathGraphic() {
-  return (
-    
-    <motion.div
-      className="relative mx-auto h-48 w-48"
-      animate={{ rotate: [0, 2, -2, 0] }}
-      transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
-      aria-hidden
-    >
-      <svg viewBox="0 0 200 200" className="h-full w-full text-emerald-700/55">
-        <defs>
-          <linearGradient id="leafG" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#6b8f71" stopOpacity="0.9" />
-            <stop offset="100%" stopColor="#a3c4a8" stopOpacity="0.7" />
-          </linearGradient>
-        </defs>
-        <ellipse
-          cx="100"
-          cy="100"
-          rx="78"
-          ry="78"
-          fill="none"
-          stroke="url(#leafG)"
-          strokeWidth="1.2"
-          strokeDasharray="4 6"
-        />
-        {[...Array(16)].map((_, i) => {
-          const a = (i / 16) * Math.PI * 2
-          const x = 100 + Math.cos(a) * 72
-          const y = 100 + Math.sin(a) * 72
-          return (
-            <ellipse
-              key={i}
-              cx={x}
-              cy={y}
-              rx="6"
-              ry="12"
-              fill="url(#leafG)"
-              transform={`rotate(${(i * 360) / 16} ${x} ${y})`}
-              opacity={0.65}
-            />
-          )
-        })}
-      </svg>
-      <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-        <p className="font-script text-2xl text-neutral-900 sm:text-3xl">
-          Save the Date
-        </p>
-      </div>
-    </motion.div>
-  )
-}
 
 export function HeroSection() {
   return (
