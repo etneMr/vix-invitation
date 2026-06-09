@@ -22,28 +22,7 @@ function FloatingHearts() {
   ]
   return (
     <>
-      {hearts.map((h, i) => (
-        <motion.span
-          key={i}
-          className="pointer-events-none absolute text-lg text-red-500"
-          style={{ left: h.x, top: h.y }}
-          initial={{ opacity: 0, y: 6 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          animate={{ y: [0, -6, 0] }}
-          transition={{
-            opacity: { duration: 0.5, delay: h.d },
-            y: {
-              duration: 3 + i * 0.2,
-              repeat: Infinity,
-              ease: 'easeInOut',
-              delay: h.d + 0.3,
-            },
-          }}
-        >
-          ♥
-        </motion.span>
-      ))}
+
     </>
   )
 }
@@ -73,28 +52,9 @@ export function FormalInviteSection() {
   return (
     <section className="border-x-2 border-skyline/60 bg-white px-5 py-16 sm:mx-auto sm:max-w-lg sm:border-x">
       <Reveal className="relative text-center">
-        <FloatingHearts />
-        <Flourish />
-        <div className="relative z-[1] flex flex-wrap items-baseline justify-center gap-x-2 gap-y-0">
-          <span className="font-script text-5xl text-neutral-900 sm:text-6xl">
-            Save
-          </span>
-          <span className="font-script text-2xl text-neutral-700 sm:text-3xl">
-            the
-          </span>
-          <span className="font-script text-5xl text-neutral-900 sm:text-6xl">
-            Date
-          </span>
-        </div>
-        <Flourish flip />
-
-        <p className="mt-10 font-script text-3xl text-neutral-900 sm:text-4xl">
-          {couple.displayPair}
-        </p>
-
         <RevealStagger className="mt-12 grid grid-cols-1 gap-4 text-center sm:grid-cols-2 sm:gap-5">
           <RevealItem>
-            <div className="rounded-2xl border border-skyline/60 bg-[#007FFF]/10 px-4 py-5 shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
+            <div className="rounded-2xl border border-skyline/60 bg-[#66b3ff]/10 px-4 py-5 shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
               <p className="font-sans text-[11px] font-bold uppercase tracking-[0.18em] text-neutral-900">
                 {family.groom.title}
               </p>
@@ -110,7 +70,7 @@ export function FormalInviteSection() {
             </div>
           </RevealItem>
           <RevealItem>
-            <div className="rounded-2xl border border-skyline/60 bg-[#007FFF]/10 px-4 py-5 shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
+            <div className="rounded-2xl border border-skyline/60 bg-[#66b3ff]/10 px-4 py-5 shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
               <p className="font-sans text-[11px] font-bold uppercase tracking-[0.18em] text-neutral-900">
                 {family.bride.title}
               </p>
@@ -160,7 +120,7 @@ export function FormalInviteSection() {
           </p>
         </Reveal>
 
-        <Reveal className="mt-12 space-y-2 font-sans text-sm text-neutral-700 rounded-2xl border border-skyline/70 bg-[#007FFF]/10 px-5 py-6">
+        <Reveal className="mt-12 space-y-2 font-sans text-sm text-neutral-700 rounded-2xl border border-skyline/70 bg-[#66b3ff]/10 px-5 py-6">
           <p>{eventMain.time}</p>
           <p className="font-medium text-neutral-900 text-[18px]">{eventMain.date}</p>
           <div className="flex items-center justify-center gap-1 mt-4 ">

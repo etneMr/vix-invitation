@@ -1,5 +1,5 @@
   /** Ngày giờ đại lễ — đổi tại đây để countdown & nội dung khớp */
-  export const WEDDING_ISO = '2026-12-12T09:00:00+07:00'
+  export const WEDDING_ISO = '2026-12-12T18:00:00+07:00'
 
   export const couple = {
     short: 'Quang & Châu',
@@ -7,21 +7,23 @@
     brideShort: 'Bảo Châu',
     groomFull: 'Trương Nguyễn Minh Quang',
     brideFull: 'Nguyễn Bảo Châu',
-    displayPair: 'Minh Quang & Bảo Châu',
+    displayPair1: 'Minh Quang ',
+    displayPair2: '&',
+    displayPair3: 'Bảo Châu',
   }
 
   export const hero = {
-    sub: 'Chúng mình cưới, 12 tháng 12 năm 2026',
+    sub: 'Chúng mình cưới ngày, 12 tháng 12 năm 2026',
   }
 
   export const groomIntro = {
     quote:
-      'Thật tuyệt với khi chúng ta tìm thấy và là một phần của cuộc đời nhau. Anh mong đoạn đường sắp tới của chúng ta sẽ luôn là tuyệt vời nhất. ',
+      '"Thật tuyệt với khi chúng ta tìm thấy và là một phần của cuộc đời nhau. Anh mong đoạn đường sắp tới của chúng ta sẽ luôn là tuyệt vời nhất."',
   }
 
   export const brideIntro = {
     quote:
-      'Gặp nhau là duyên phận, đi cùng nhau là lựa chọn. Em mong được nắm tay anh bước vào hành trình mới thật ấm áp.',
+      '"Gặp nhau là duyên phận, đi cùng nhau là lựa chọn. Em mong được nắm tay anh bước vào hành trình mới thật ấm áp."',
   }
 
   export const family = {
@@ -221,9 +223,9 @@
     countdownBg:
       '/Save-date.JPG',
     coupleOverlapLeft:
-      'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=400&h=400&fit=crop&q=80',
+      'chure1-2.png',
     coupleOverlapRight:
-      'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=400&h=400&fit=crop&q=80',
+      '/codau1-2.png',
     bouquet:
       'https://images.unsplash.com/photo-1526047932273-341f2a7631f9?w=300&h=300&fit=crop&q=80',
     videoCover:

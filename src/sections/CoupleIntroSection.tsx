@@ -4,12 +4,12 @@ import { Reveal } from '../components/Reveal'
 
 export function CoupleIntroSection() {
   return (
-    <section className="bg-white px-6 py-16">
+    <section className="bg-white px-6 py-16 pb-0">
       <Reveal className="mx-auto max-w-lg text-center">
-        <h2 className="font-script text-3xl text-neutral-900">
+        <h2 className="font-script text-5xl text-neutral-900">
           {couple.groomShort}
         </h2>
-        <p className="mt-4 font-sans text-sm leading-relaxed text-neutral-600">
+        <p className="mt-4 font-sans text-sm leading-relaxed text-neutral-600 italic">
           {groomIntro.quote}
         </p>
 
@@ -34,14 +34,15 @@ export function CoupleIntroSection() {
               src={images.coupleOverlapRight}
               alt="Cặp đôi"
               className="h-full w-full object-cover"
+
             />
           </motion.div>
         </div>
 
-        <h2 className="mt-14 font-script text-3xl text-neutral-900">
+        <h2 className="mt-14 font-script text-5xl text-neutral-900">
           {couple.brideShort}
         </h2>
-        <p className="mt-4 font-sans text-sm leading-relaxed text-neutral-600">
+        <p className="mt-4 font-sans text-sm leading-relaxed text-neutral-600 italic">
           {brideIntro.quote}
         </p>
       </Reveal>
