@@ -16,26 +16,26 @@ function FloatingHearts() {
   )
 }
 
-function Flourish({ flip }: { flip?: boolean }) {
-  return (
-    <motion.svg
-      viewBox="0 0 200 24"
-      className={`mx-auto mb-3 mt-2 h-6 w-48 text-neutral-800 ${flip ? 'scale-x-[-1]' : ''}`}
-      aria-hidden
-    >
-      <motion.path
-        d="M4 14 Q 50 4 100 14 T 196 14"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1"
-        initial={{ pathLength: 0, opacity: 0 }}
-        whileInView={{ pathLength: 1, opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
-      />
-    </motion.svg>
-  )
-}
+// function Flourish({ flip }: { flip?: boolean }) {
+//   return (
+//     <motion.svg
+//       viewBox="0 0 200 24"
+//       className={`mx-auto mb-3 mt-2 h-6 w-48 text-neutral-800 ${flip ? 'scale-x-[-1]' : ''}`}
+//       aria-hidden
+//     >
+//       <motion.path
+//         d="M4 14 Q 50 4 100 14 T 196 14"
+//         fill="none"
+//         stroke="currentColor"
+//         strokeWidth="1"
+//         initial={{ pathLength: 0, opacity: 0 }}
+//         whileInView={{ pathLength: 1, opacity: 1 }}
+//         viewport={{ once: true }}
+//         transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
+//       />
+//     </motion.svg>
+//   )
+// }
 
 export function HeroSection() {
   return (
