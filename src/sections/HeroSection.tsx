@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+// import { motion } from 'framer-motion'
 import { couple, hero } from '../data/wedding'
 import { Reveal } from '../components/Reveal'
 function FloatingHearts() {
