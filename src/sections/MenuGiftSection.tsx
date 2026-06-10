@@ -10,7 +10,7 @@ function FoliageCorner({ position }: { position: 'tr' | 'bl' }) {
   const isTr = position === 'tr'
   return (
     <motion.div
-      className={`pointer-events-none absolute h-36 w-36 rounded-full bg-gradient-to-br from-emerald-700/35 via-emerald-600/15 to-transparent blur-md ${isTr ? '-right-10 -top-10' : '-bottom-10 -left-10'
+      className={`pointer-events-none absolute h-36 w-36 rounded-full bg-gradient-to-br from-[#66b3ff]-700/35 via-emerald-600/15 to-transparent blur-md ${isTr ? '-right-10 -top-10' : '-bottom-10 -left-10'
         }`}
       initial={{ opacity: 0, scale: 0.85 }}
       whileInView={{ opacity: 1, scale: 1 }}
@@ -23,7 +23,7 @@ function FoliageCorner({ position }: { position: 'tr' | 'bl' }) {
 
 function QrPlaceholder({ qrCodeUrl }: { qrCodeUrl: string }) {
   return (
-    <div className="mx-auto flex aspect-square w-44 items-center justify-center rounded-lg border-2 border-dashed border-neutral-300 bg-neutral-50 text-center font-sans text-xs text-neutral-400">
+    <div className="mx-auto flex aspect-square w-44 items-center justify-center rounded-lg border-2 border-dashed border-[#66b3ff]/60 bg-neutral-50 text-center font-sans text-xs text-neutral-400">
       <img src={qrCodeUrl} alt="QR Code" className="p-1 w-full h-full object-contain" />
     </div>
   )
@@ -82,11 +82,11 @@ export function MenuGiftSection() {
       <FoliageCorner position="bl" />
 
       <Reveal className="relative z-[1] mx-auto mt-20 max-w-md text-center">
-        <p className="font-sans text-xs font-medium text-gold">{gift.hint}</p>
-        <h3 className="mt-2 font-script text-3xl text-neutral-900">
+        <p className="font-sans text-xs font-medium text-[#66b3ff]/100">{gift.hint}</p>
+        <h3 className="mt-2 font-script text-3xl text-[#1F3A5F]">
           {gift.title}
         </h3>
-        <p className="mx-auto mt-4 max-w-xs font-sans text-xs leading-relaxed text-gold">
+        <p className="mx-auto mt-4 max-w-xs font-sans text-xs leading-relaxed ">
           {gift.note}
         </p>
 
@@ -94,17 +94,17 @@ export function MenuGiftSection() {
           {gift.accounts.map((acc) => (
             <div
               key={acc.account}
-              className="rounded-2xl border border-neutral-100 bg-neutral-50/80 px-4 py-6"
+              className="rounded-2xl border border-[#66b3ff]/60 bg-[#66b3ff]/5 px-4 py-6"
             >
-              <p className="font-sans text-xs font-semibold uppercase tracking-wide text-gold">
+              <p className="font-sans text-sx font-semibold uppercase tracking-wide text-[#66b3ff]/80">
                 {acc.label}
               </p>
-              <p className="mt-3 font-sans text-sm text-neutral-800">
+              <p className="mt-3 font-sans text-base text-neutral-800">
                 Số tài khoản:{' '}
                 <span className="font-medium">{acc.account}</span>
               </p>
-              <p className="mt-2 inline-block rounded border border-skyline/80 px-4 py-2 font-sans text-sm text-neutral-900">
-                Chủ TK: {acc.holder}
+              <p className="mt-2 inline-block rounded border border-[#66b3ff]/60 px-4 py-2 font-sans font-bold text-[13px] text-neutral-900">
+                Chủ TK: {acc.holder}  
               </p>
               <p className="mt-2 font-sans text-sm text-neutral-700">
                 Ngân hàng: {acc.bank}

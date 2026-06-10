@@ -10,6 +10,7 @@
     displayPair1: 'Minh Quang ',
     displayPair2: '&',
     displayPair3: 'Bảo Châu',
+    displayPair: '/saveTheDate.png',
   }
 
   export const hero = {
@@ -68,8 +69,8 @@
   }
 
   export const storyLead = {
-    eyebrow: 'Chuyện chúng mình',
-    title: 'Bắt đầu như thế nào',
+    eyebrow: 'Câu chuyện chúng mình',
+    title: 'Đã diễn ra như thế nào',
   }
 
   export type TimelineItem = {
@@ -85,11 +86,11 @@
 
   export const timeline: TimelineItem[] = [
     {
-      date: '22 tháng 4, 2019',
+      date: '01 tháng 07, 2023',
       title: 'Lần đầu gặp',
-      body: 'Chúng mình gặp nhau trong một buổi chiều ở quán cà phê nhỏ. Câu chuyện bắt đầu từ một nụ cười và tách cà phê còn hơi ấm.',
+      body: 'Chúng mình đã gặp nhau thông qua Facebook, cùng với những sự chân thành chúng mình đã tìm hiểu về nhau ',
       image:
-        'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=600&h=600&fit=crop&q=80',
+        '/retro.png',
       layout: 'circle',
       leaves: 'right',
       imageFirst: true,
@@ -227,7 +228,7 @@
     coupleOverlapRight:
       '/codau1-2.png',
     bouquet:
-      'https://images.unsplash.com/photo-1526047932273-341f2a7631f9?w=300&h=300&fit=crop&q=80',
+      '/boquet.png',
     videoCover:
       '/wedding-vid.mp4',
   }

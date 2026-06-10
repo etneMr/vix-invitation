@@ -7,11 +7,11 @@ export function GallerySection() {
   return (
     <section className="bg-white px-4 py-16">
       <Reveal className="mx-auto max-w-lg text-center">
-        <p className="font-sans text-xs font-semibold uppercase tracking-[0.25em] text-gold">
+        <p className="font-sans text-xs font-semibold uppercase tracking-[0.25em] text-[#66b3ff]/90   ">
           Khoảnh khắc
         </p>
         <h2 className="mt-2 font-script text-4xl text-neutral-900">Album ảnh</h2>
-        <p className="mx-auto mt-2 max-w-xs font-sans text-xs text-neutral-500">
+        <p className="mx-auto mt-2 max-w-xs font-sans text-xs text-[#1F3A5F]">
           Một vài hình ảnh trước ngày vui — sẽ được cập nhật thêm sau lễ.
         </p>
       </Reveal>

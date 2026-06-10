@@ -58,7 +58,7 @@ export function HeroSection() {
           {couple.short}
         </motion.h1> */}
         <FloatingHearts />
-                <Flourish />
+                {/* <Flourish />
                 <div className="relative z-[1] flex flex-wrap items-baseline justify-center gap-x-2 gap-y-0">
                   <span className="font-script text-5xl text-neutral-900 sm:text-3xl">
                     Save
@@ -70,7 +70,9 @@ export function HeroSection() {
                     Date
                   </span>
                 </div>
-                <Flourish flip />
+                <Flourish flip /> */}
+              
+                <img width={150} height={150} src='/public/saveTheDate.png' className='py-12 pt-0'></img>
         
                 <p className = "text-[#1F3A5F]/90">
                 <p className="mt-5 font-script text-4xl sm:text-7xl ">

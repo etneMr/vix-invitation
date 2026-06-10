@@ -49,22 +49,22 @@ function ChibiCharacter({ type, imageUrl }: { type: 'bride' | 'groom', imageUrl:
 
 function ChibiThankYouAnimation() {
   return (
-    <div className="rounded-md border border-sage/40 bg-sage/5 px-4 py-5 text-center">
+    <div className="rounded-md border border-[#66b3ff]/60 bg-[#66b3ff]/5 px-4 py-5 text-center">
       <style>{chibiAnimationStyles}</style>
-      <div className="mx-auto mb-4 w-fit rounded-full border border-sage/30 bg-white px-4 py-2 shadow-sm">
-        <p className="font-sans text-sm font-semibold tracking-wide text-sage">Hai đứa mình cảm ơn bạn rất nhiều!</p>
+      <div className="mx-auto mb-4 w-fit rounded-full border border-[#66b3ff]/60 bg-white px-4 py-2 shadow-sm">
+        <p className="font-sans text-sm font-semibold tracking-wide text-[#66b3ff]/80">Hai đứa mình cảm ơn bạn rất nhiều!</p>
       </div>
       <div className="flex items-end justify-center gap-6">
         <div className="[animation-delay:60ms]">
           <ChibiCharacter type="bride" imageUrl="/bridge-sticker.png" />
-          <p className="mt-2 text-xs font-medium uppercase tracking-wider text-sage">Bảo Châu</p>
+          <p className="mt-2 text-xs font-medium uppercase tracking-wider text-[#66b3ff]/80">Bảo Châu</p>
         </div>
         <div className="[animation-delay:120ms]">
           <ChibiCharacter type="groom" imageUrl="/bridge-sticker.png" />
-          <p className="mt-2 text-xs font-medium uppercase tracking-wider text-sage">Minh Quang</p>
+          <p className="mt-2 text-xs font-medium uppercase tracking-wider text-[#66b3ff]/90">Minh Quang</p>
         </div>
       </div>
-      <p className="mt-3 animate-pulse font-script text-3xl text-sage">Cảm ơn bạn!</p>
+      <p className="mt-3 animate-pulse font-script text-3xl text-[#66b3ff]/90">Cảm ơn bạn!</p>
     </div>
   )
 }
@@ -87,7 +87,7 @@ export function RsvpSection() {
     setSubmitFeedback(null)
 
     if (!guestName) {
-      setSubmitFeedback('Vui lòng nhập tên trước khi gửi RSVP.')
+      setSubmitFeedback('Nhớ nhập tên trước khi gửi xác nhận nhé <3')
       return
     }
 
@@ -125,14 +125,14 @@ export function RsvpSection() {
   return (
     <section className="border-x-2 border-skyline/50 bg-white px-5 py-16 sm:mx-auto sm:max-w-lg sm:border-x">
       <Reveal className="mx-auto max-w-md text-center">
-        <h2 className="font-script text-5xl text-neutral-900">{rsvp.title}</h2>
-        <p className="mt-3 text-xs font-medium tracking-[0.2em] text-gold">{rsvp.deadline}</p>
+        <h2 className="font-script text-5xl text-[#1F3A5F]">{rsvp.title}</h2>
+        <p className="mt-3 text-xs font-medium tracking-[0.2em] text-[#1F3A5F]">{rsvp.deadline}</p>
         <p className="mx-auto mt-4 max-w-sm font-sans text-sm leading-relaxed text-neutral-700">
           {rsvp.subtitle}
         </p>
       </Reveal>
 
-      <Reveal className="mx-auto mt-8 max-w-md rounded-sm border border-neutral-200 bg-white p-4 shadow-sm">
+      <Reveal className="mx-auto mt-8 max-w-md rounded-sm border border-[#66b3ff]/60 bg-white p-4 shadow-sm">
         <form className="space-y-6 text-left" onSubmit={handleSubmit}>
           <fieldset className="space-y-6" disabled={isSubmitting || isSubmitSuccess}>
             {!hasParamName && <label className="block space-y-2">
@@ -144,7 +144,7 @@ export function RsvpSection() {
                 value={name}
                 onChange={(event) => setName(event.target.value)}
                 placeholder="Tên"
-                className="w-full border border-skyline/80 px-3 py-2.5 font-sans text-base text-neutral-800 outline-none transition focus:border-sage disabled:cursor-not-allowed disabled:opacity-60"
+                className="w-full border border-[#66b3ff]/60 px-3 py-2.5 font-sans text-base text-neutral-800 outline-none transition focus:border-[#66b3ff]/80 disabled:cursor-not-allowed disabled:opacity-60"
               />
             </label>}
 
@@ -156,7 +156,7 @@ export function RsvpSection() {
                   name="attendance"
                   checked={attendance === 'co'}
                   onChange={() => setAttendance('co')}
-                  className="h-4 w-4 accent-sage"
+                  className="h-4 w-4 accent-sage accent-[#66b3ff]"
                 />
                 Có
               </label>
@@ -166,7 +166,7 @@ export function RsvpSection() {
                   name="attendance"
                   checked={attendance === 'khong'}
                   onChange={() => setAttendance('khong')}
-                  className="h-4 w-4 accent-sage"
+                  className="h-4 w-4 accent-sage accent-[#66b3ff]"
                 />
                 Không
               </label>
@@ -180,7 +180,7 @@ export function RsvpSection() {
                   name="guestSide"
                   checked={guestSide === 'chu-re'}
                   onChange={() => setGuestSide('chu-re')}
-                  className="h-4 w-4 accent-sage"
+                  className="h-4 w-4 accent-sage accent-[#66b3ff]"
                 />
                 Chú rể
               </label>
@@ -190,7 +190,7 @@ export function RsvpSection() {
                   name="guestSide"
                   checked={guestSide === 'co-dau'}
                   onChange={() => setGuestSide('co-dau')}
-                  className="h-4 w-4 accent-sage"
+                  className="h-4 w-4 accent-sage accent-[#66b3ff]"
                 />
                 Cô dâu
               </label>
@@ -204,7 +204,7 @@ export function RsvpSection() {
                 max={10}
                 value={guestCount}
                 onChange={(event) => setGuestCount(event.target.value)}
-                className="w-full border-b border-neutral-300 px-1 py-2 font-sans text-lg text-neutral-700 outline-none transition focus:border-sage disabled:cursor-not-allowed disabled:opacity-60"
+                className="w-full border-b border-[#66b3ff]/60 px-1 py-2 font-sans text-lg text-neutral-700 outline-none transition focus:border-[#66b3ff]/80 disabled:cursor-not-allowed disabled:opacity-60"
               />
             </label>
 
@@ -214,7 +214,7 @@ export function RsvpSection() {
                 rows={3}
                 value={message}
                 onChange={(event) => setMessage(event.target.value)}
-                className="w-full resize-none border-b border-neutral-300 px-1 py-2 font-sans text-base text-neutral-700 outline-none transition focus:border-sage disabled:cursor-not-allowed disabled:opacity-60"
+                className="w-full resize-none border-b border-[#66b3ff]/60 px-1 py-2 font-sans text-base text-neutral-700 outline-none transition focus:border-[#66b3ff]/80 disabled:cursor-not-allowed disabled:opacity-60"
               />
             </label>
           </fieldset>
@@ -229,7 +229,7 @@ export function RsvpSection() {
             <button
               type="submit"
               disabled={isSubmitting || isSubmitSuccess}
-              className="bg-sage px-6 py-2.5 font-sans text-base font-semibold uppercase tracking-wide text-white transition hover:brightness-95 disabled:cursor-not-allowed disabled:opacity-60"
+              className="bg-[#66b3ff]/90 px-6 py-2.5 font-sans text-base font-semibold uppercase tracking-wide text-white transition hover:brightness-95 disabled:cursor-not-allowed disabled:opacity-60"
             >
               {isSubmitting ? 'Đang gửi...' : isSubmitSuccess ? 'Đã gửi' : 'Gửi'}
             </button>

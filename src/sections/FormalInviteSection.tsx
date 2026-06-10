@@ -111,11 +111,11 @@ export function FormalInviteSection() {
         </Reveal>
 
         <Reveal className="mt-12 space-y-3">
-          <p className="font-script text-3xl text-neutral-900 sm:text-4xl">
+          <p className="font-script text-3xl text-[#1F3A5F] sm:text-4xl">
             {couple.groomFull}
           </p>
           <p className="text-lg text-red-500">♥</p>
-          <p className="font-script text-3xl text-neutral-900 sm:text-4xl">
+          <p className="font-script text-3xl text-[#1F3A5F] sm:text-4xl">
             {couple.brideFull}
           </p>
         </Reveal>

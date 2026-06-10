@@ -7,7 +7,7 @@ import { Reveal } from '../components/Reveal'
 function LeafCluster({ side }: { side: 'left' | 'right' }) {
   return (
     <motion.div
-      className={`pointer-events-none absolute bottom-0 top-1/2 z-10 h-32 w-24 -translate-y-1/2 bg-gradient-to-b from-emerald-600/25 via-emerald-500/20 to-transparent blur-sm ${
+      className={`pointer-events-none absolute bottom-0 top-1/2 z-10 h-32 w-24 -translate-y-1/2 bg-gradient-to-b from-[#66b3ff]/25 via-[#66b3ff]/20 to-transparent blur-sm ${
         side === 'right' ? '-right-4 rounded-l-full' : '-left-4 rounded-r-full'
       }`}
       initial={{ opacity: 0, scale: 0.9, x: side === 'right' ? 12 : -12 }}
@@ -26,7 +26,7 @@ function MilestoneCard({
 }: Pick<TimelineItem, 'date' | 'title' | 'body'>) {
   return (
     <article className="rounded-2xl bg-white/90 px-5 py-6 shadow-sm shadow-black/5">
-      <p className="font-sans text-[11px] font-semibold uppercase tracking-widest text-neutral-500">
+      <p className="font-sans text-[11px] font-semibold uppercase tracking-widest text-[#1F3A5F]">
         {date}
       </p>
       <h3 className="mt-2 font-script text-3xl text-neutral-900">{title}</h3>
@@ -138,7 +138,7 @@ export function StoryTimelineSection() {
   return (
     <section className="border-x-2 border-skyline/50 bg-[#f9f9f9] px-4 py-16 sm:mx-auto sm:max-w-lg sm:border-x">
       <Reveal className="text-center">
-        <p className="font-sans text-sm font-medium tracking-wide text-gold">
+        <p className="font-sans text-[#1F3A5F]/90 font-medium tracking-wide text-3xl">
           {storyLead.eyebrow}
         </p>
         <h2 className="mt-2 font-script text-4xl text-neutral-900">
@@ -176,7 +176,7 @@ export function StoryTimelineSection() {
             type="button"
             onClick={() => setExpanded((v) => !v)}
             aria-expanded={expanded}
-            className="group inline-flex items-center gap-2 rounded-full border border-gold/40 bg-white/70 px-5 py-2 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-gold shadow-sm shadow-black/5 transition hover:bg-gold hover:text-white"
+            className="group inline-flex items-center gap-2 rounded-full border border-[#66b3ff]/60 bg-white/70 px-5 py-2 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-[#66b3ff]/80 shadow-sm shadow-black/5 transition hover:bg-[#66b3ff]/60 hover:text-white"
           >
             <span>
               {expanded ? 'Thu gọn' : 'Xem thêm câu chuyện'}
