@@ -72,7 +72,7 @@ export function HeroSection() {
                 </div>
                 <Flourish flip /> */}
               
-                <img width={150} height={150} src='/public/saveTheDate.png' className='py-12 pt-0'></img>
+                <img width={150} height={150} src='/saveTheDate.png' className='py-12 pt-0'></img>
         
                 <p className = "text-[#1F3A5F]/90">
                 <p className="mt-5 font-script text-4xl sm:text-7xl ">
