@@ -32,26 +32,26 @@ function FloatingHearts() {
   )
 }
 
-function Flourish({ flip }: { flip?: boolean }) {
-  return (
-    <motion.svg
-      viewBox="0 0 200 28"
-      className={`mx-auto h-5 w-50 text-neutral-800 ${flip ? 'scale-x-[-1]' : ''}`}
-      aria-hidden
-    >
-      <motion.path
-        d="M4 16 Q 55 2 100 16 T 196 16"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="0.9"
-        initial={{ pathLength: 0, opacity: 0 }}
-        whileInView={{ pathLength: 1, opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-      />
-    </motion.svg>
-  )
-}
+// function Flourish({ flip }: { flip?: boolean }) {
+//   return (
+//     <motion.svg
+//       viewBox="0 0 200 28"
+//       className={`mx-auto h-5 w-50 text-neutral-800 ${flip ? 'scale-x-[-1]' : ''}`}
+//       aria-hidden
+//     >
+//       <motion.path
+//         d="M4 16 Q 55 2 100 16 T 196 16"
+//         fill="none"
+//         stroke="currentColor"
+//         strokeWidth="0.9"
+//         initial={{ pathLength: 0, opacity: 0 }}
+//         whileInView={{ pathLength: 1, opacity: 1 }}
+//         viewport={{ once: true }}
+//         transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+//       />
+//     </motion.svg>
+//   )
+// }
 
 export function FooterSection() {
   return (
