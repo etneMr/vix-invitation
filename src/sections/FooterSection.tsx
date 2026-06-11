@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { couple, footerClosing, hotline } from '../data/wedding'
+import {  footerClosing, hotline } from '../data/wedding'
 import { Reveal } from '../components/Reveal'
 
 function FloatingHearts() {
