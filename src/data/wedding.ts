@@ -63,7 +63,7 @@
   }
 
   export const hotline = {
-    title: 'Liên hệ',
+    title: 'Số điện thoại Liên hệ',
     groom: { label: 'Chú rể', phone: '0978 719 683' },
     bride: { label: 'Cô dâu', phone: '0778 805 534' },
   }
@@ -139,10 +139,10 @@
       title: 'Lễ rước dâu',
       image:
         'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=500&h=500&fit=crop&q=80',
-      dateLine: 'Thứ Hai,12 tháng 12, 2026',
+      dateLine: 'Thứ Bảy, 12 tháng 12, 2026',
       time: '1:00 chiều – 4:00 chiều',
       venue: 'Tại gia đình nhà Trai',
-      address: '497/22 Đ. Phan Văn Trị, Phường 10, Gò Vấp, Hồ Chí Minh, Việt Nam',
+      address: '497/22 Đường Phan Văn Trị, Phường 10, Gò Vấp, HCM',
       phone: 'Sđt: 0978719683',
       mapsUrl: 'https://maps.app.goo.gl/x7ptzUUNyjNPAZgU6',
     },
@@ -150,10 +150,10 @@
       title: 'Tiệc cưới',
       image:
         'https://images.unsplash.com/photo-1529636798458-92182e662485?w=500&h=500&fit=crop&q=80',
-      dateLine: 'Thứ Hai,12 tháng 12, 2026',
-      time: '6:00 chiều – 9:00 chiều',
+      dateLine: 'Thứ Bảy, 12 tháng 12, 2026',
+      time: '6:00 chiều – 9:00 tối',
       venue: 'Nhà hàng tiệc cưới Luxury',
-      address: '171 Đ. Nguyễn Thái Sơn, Hạnh Thông, Hồ Chí Minh',
+      address: '171 Đường Nguyễn Thái Sơn, Hạnh Thông, HCM',
       phone: 'Sđt: 02835882288',
       mapsUrl: 'https://maps.google.com',
     },
@@ -207,11 +207,12 @@
 
   export const rsvp = {
     title: 'Xác nhận tham dự',
-    subtitle:
-      'Gia đình rất mong nhận được phản hồi của bạn trước ngày 25 tháng 11 năm 2026 để tiện sắp xếp chỗ ngồi.',
+    subtitle1:
+      'Gia đình rất mong nhận được phản hồi của bạn trước ',
+    subtitle2:' để tiện sắp xếp chỗ ngồi.',
     note: 'Điền thông tin và gửi phản hồi đến gia đình chúng tôi.',
     emailTo: '',
-    deadline: 'Hạn phản hồi: 25/11/2026',
+    deadline: 'ngày 25 tháng 11 năm 2026',
   }
 
   export const footerClosing = {

@@ -22,10 +22,10 @@ function EventBlock({
         <img src={image} alt="" className="h-full w-full object-cover" />
       </motion.div>
       <div className="mt-6 rounded-sm bg-[#66b3ff]/90 px-4 py-2.5 shadow-inner">
-        <h3 className="font-script text-2xl text-white">{title}</h3>
+        <h3 className="font-script text-3xl text-white">{title}</h3>
       </div>
       <div className="mt-5 space-y-1.5 font-sans text-sm text-[#1F3A5F] ">
-        <p>{dateLine}</p>
+        <p className=''>{dateLine}</p>
         <p className="font-medium text-neutral-900">{time}</p>
         <p className="font-medium text-neutral-800">{venue}</p>
         <p className="mx-auto max-w-xs text-xs leading-relaxed text-[#1F3A5F]">
@@ -36,7 +36,7 @@ function EventBlock({
           href={mapsUrl}
           target="_blank"
           rel="noreferrer"
-          className="inline-block pt-2 text-[#66b3ff]/70 underline decoration-[#66b3ff] underline-offset-4 hover:text-[#66b3ff]/100"
+          className="inline-block pt-2 text-[#66b3ff]/90 underline decoration-[#66b3ff] underline-offset-4 hover:text-[#66b3ff]/100"
         >
           Xem vị trí
         </a>

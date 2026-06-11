@@ -83,7 +83,7 @@ export function MenuGiftSection() {
 
       <Reveal className="relative z-[1] mx-auto mt-20 max-w-md text-center">
         <p className="font-sans text-xs font-medium text-[#66b3ff]/100">{gift.hint}</p>
-        <h3 className="mt-2 font-script text-3xl text-[#1F3A5F]">
+        <h3 className="mt-2 font-script text-4xl text-[#1F3A5F]">
           {gift.title}
         </h3>
         <p className="mx-auto mt-4 max-w-xs font-sans text-xs leading-relaxed ">

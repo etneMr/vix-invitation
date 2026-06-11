@@ -55,10 +55,10 @@ function Flourish({ flip }: { flip?: boolean }) {
 
 export function FooterSection() {
   return (
-    <footer className="relative overflow-hidden bg-white px-6 pb-16 pt-12">
+    <footer className="relative overflow-hidden bg-white px-6 pb-16 pt-0">
       <Reveal className="relative mx-auto max-w-lg text-center">
         <FloatingHearts />
-        <Flourish />
+        {/* <Flourish />
         <div className="relative z-[1] flex flex-wrap items-baseline justify-center gap-x-2">
           <span className="font-script text-3xl text-neutral-900 sm:text-3xl">
             Save
@@ -68,14 +68,12 @@ export function FooterSection() {
             Date
           </span>
         </div>
-        <Flourish flip />
+        <Flourish flip /> */}
         <p className="relative z-[1] mt-6 font-sans text-sm leading-relaxed text-neutral-600">
           {footerClosing.thankYou}
         </p>
-        <p className="relative z-[1] mt-4 font-script text-5xl text-[#1F3A5F]">
-          {couple.short}
-        </p>
-        <p className="relative z-[1] mt-2 font-sans text-[12px] uppercase tracking-[0.35em] text-[#66b3ff]">
+
+        <p className="relative z-[1] mt-2 font-sans text-[12px] uppercase tracking-[0.35em] text-[#66b3ff]/80 font-bold">
           {footerClosing.tagline}
         </p>
       </Reveal>
@@ -90,14 +88,14 @@ export function FooterSection() {
             className="flex flex-col items-center rounded-xl bg-[#66b3ff]/10 px-4 py-3 transition hover:bg-neutral-100"
           >
             <span className="text-xs text-neutral-500">{hotline.groom.label}</span>
-            <span className="font-medium text-[#1F3A5F]">{hotline.groom.phone}</span>
+            <span className="font-medium text-[#1F3A5F] text-base">{hotline.groom.phone}</span>
           </a>
           <a
             href={`tel:${hotline.bride.phone.replace(/\s/g, '')}`}
             className="flex flex-col items-center rounded-xl bg-[#66b3ff]/10 px-4 py-3 transition hover:bg-neutral-100"
           >
             <span className="text-xs text-neutral-500">{hotline.bride.label}</span>
-            <span className="font-medium text-[#1F3A5F]">{hotline.bride.phone}</span>
+            <span className="font-medium text-[#1F3A5F] text-base">{hotline.bride.phone}</span>
           </a>
         </div>
       </Reveal>

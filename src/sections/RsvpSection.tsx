@@ -64,7 +64,7 @@ function ChibiThankYouAnimation() {
           <p className="mt-2 text-xs font-medium uppercase tracking-wider text-[#66b3ff]/90">Minh Quang</p>
         </div>
       </div>
-      <p className="mt-3 animate-pulse font-script text-3xl text-[#66b3ff]/90">Cảm ơn bạn!</p>
+      {/* <p className="mt-3 animate-pulse font-script text-3xl text-[#66b3ff]/90">Cảm ơn bạn!</p> */}
     </div>
   )
 }
@@ -126,10 +126,13 @@ export function RsvpSection() {
     <section className="border-x-2 border-skyline/50 bg-white px-5 py-16 sm:mx-auto sm:max-w-lg sm:border-x">
       <Reveal className="mx-auto max-w-md text-center">
         <h2 className="font-script text-5xl text-[#1F3A5F]">{rsvp.title}</h2>
-        <p className="mt-3 text-xs font-medium tracking-[0.2em] text-[#1F3A5F]">{rsvp.deadline}</p>
+        {/* <p className="mt-3 text-xs font-medium tracking-[0.2em] text-[#1F3A5F]">{rsvp.deadline}</p> */}
         <p className="mx-auto mt-4 max-w-sm font-sans text-sm leading-relaxed text-neutral-700">
-          {rsvp.subtitle}
+         <span> {rsvp.subtitle1}</span> 
+         <span className='font-bold'> {rsvp.deadline}</span> 
+         <span> {rsvp.subtitle2}</span> 
         </p>
+        
       </Reveal>
 
       <Reveal className="mx-auto mt-8 max-w-md rounded-sm border border-[#66b3ff]/60 bg-white p-4 shadow-sm">
@@ -156,7 +159,7 @@ export function RsvpSection() {
                   name="attendance"
                   checked={attendance === 'co'}
                   onChange={() => setAttendance('co')}
-                  className="h-4 w-4 accent-sage accent-[#66b3ff]"
+                  className="h-4 w-4 accent-[#66b3ff] accent-[#66b3ff]"
                 />
                 Có
               </label>
@@ -166,7 +169,7 @@ export function RsvpSection() {
                   name="attendance"
                   checked={attendance === 'khong'}
                   onChange={() => setAttendance('khong')}
-                  className="h-4 w-4 accent-sage accent-[#66b3ff]"
+                  className="h-4 w-4 accent-[#66b3ff] accent-[#66b3ff]"
                 />
                 Không
               </label>
@@ -180,7 +183,7 @@ export function RsvpSection() {
                   name="guestSide"
                   checked={guestSide === 'chu-re'}
                   onChange={() => setGuestSide('chu-re')}
-                  className="h-4 w-4 accent-sage accent-[#66b3ff]"
+                  className="h-4 w-4 accent-[#66b3ff] accent-[#66b3ff]"
                 />
                 Chú rể
               </label>
@@ -190,7 +193,7 @@ export function RsvpSection() {
                   name="guestSide"
                   checked={guestSide === 'co-dau'}
                   onChange={() => setGuestSide('co-dau')}
-                  className="h-4 w-4 accent-sage accent-[#66b3ff]"
+                  className="h-4 w-4 accent-[#66b3ff] accent-[#66b3ff]"
                 />
                 Cô dâu
               </label>
