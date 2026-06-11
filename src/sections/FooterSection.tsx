@@ -4,10 +4,10 @@ import { Reveal } from '../components/Reveal'
 
 function FloatingHearts() {
   const hearts = [
-    { x: '6%', y: '12%' },
-    { x: '90%', y: '20%' },
-    { x: '14%', y: '78%' },
-    { x: '82%', y: '70%' },
+    { x: '2%', y: '25%' },
+    { x: '97%', y: '25%' },
+    { x: '14%', y: '95%' },
+    { x: '82%', y: '95%' },
   ]
   return (
     <>
