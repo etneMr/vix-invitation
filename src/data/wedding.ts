@@ -144,7 +144,7 @@
       venue: 'Tại gia đình nhà Trai',
       address: '497/22 Đường Phan Văn Trị, Phường 10, Gò Vấp, HCM',
       phone: 'Sđt: 0978719683',
-      mapsUrl: 'https://maps.app.goo.gl/x7ptzUUNyjNPAZgU6',
+      mapsUrl: 'https://maps.app.goo.gl/LmYJ9aCR9zQtF1Pu8',
     },
     {
       title: 'Tiệc cưới',
@@ -155,7 +155,7 @@
       venue: 'Nhà hàng tiệc cưới Luxury',
       address: '171 Đường Nguyễn Thái Sơn, Hạnh Thông, HCM',
       phone: 'Sđt: 02835882288',
-      mapsUrl: 'https://maps.google.com',
+      mapsUrl: 'https://maps.app.goo.gl/AYTVPr53QUCVbcdK8',
     },
   ]
 

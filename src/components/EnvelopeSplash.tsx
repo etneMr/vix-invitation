@@ -12,11 +12,9 @@ export function EnvelopeSplash({ onOpenComplete }: EnvelopeSplashProps) {
   const [activeImageIndex, setActiveImageIndex] = useState(0)
 
   const coupleSlides = [
-    'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=1200&h=1600&fit=crop&q=80',
-    'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1200&h=1600&fit=crop&q=80',
-    'https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&h=1600&fit=crop&q=80',
-    'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=1200&h=1600&fit=crop&q=80',
-    'https://images.unsplash.com/photo-1529636798458-92182e662485?w=1200&h=1600&fit=crop&q=80',
+  '/bg1.JPG',
+  '/bg2.JPG',
+  '/bg3.JPG',
   ]
 
   useEffect(() => {
