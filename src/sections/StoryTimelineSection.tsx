@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { storyLead, timeline } from '../data/wedding'
 import type { TimelineItem } from '../data/wedding'
@@ -127,7 +127,12 @@ function TimelineBlock({ item }: { item: TimelineItem }) {
   )
 }
 
+const COLLAPSE_DURATION_MS = 450
+
 export function StoryTimelineSection() {
+  const sectionRef = useRef<HTMLElement>(null)
+  const headerRef = useRef<HTMLDivElement>(null)
+  const collapseCleanupRef = useRef<(() => void) | null>(null)
   const [expanded, setExpanded] = useState(false)
   const previewIndex = timeline.findIndex((item) => item.imageFirst)
   const resolvedPreviewIndex = previewIndex >= 0 ? previewIndex : 0
@@ -135,16 +140,78 @@ export function StoryTimelineSection() {
   const hiddenItems = timeline.filter((_, index) => index !== resolvedPreviewIndex)
   const hasHiddenContent = Boolean(previewItem)
 
+  const getSectionScrollTop = () => {
+    const header = headerRef.current ?? sectionRef.current
+    if (!header) return 0
+
+    return Math.max(0, header.getBoundingClientRect().top + window.scrollY)
+  }
+
+  const pinScrollDuringCollapse = (targetTop: number) => {
+    collapseCleanupRef.current?.()
+
+    let active = true
+
+    const pin = () => {
+      window.scrollTo({ top: targetTop, left: 0, behavior: 'instant' })
+    }
+
+    const onScroll = () => pin()
+    window.addEventListener('scroll', onScroll)
+
+    let rafId = 0
+    const loop = () => {
+      if (!active) return
+      pin()
+      rafId = window.requestAnimationFrame(loop)
+    }
+    rafId = window.requestAnimationFrame(loop)
+
+    const timer = window.setTimeout(() => {
+      active = false
+      window.cancelAnimationFrame(rafId)
+      window.removeEventListener('scroll', onScroll)
+      pin()
+      collapseCleanupRef.current = null
+    }, COLLAPSE_DURATION_MS + 80)
+
+    collapseCleanupRef.current = () => {
+      active = false
+      window.cancelAnimationFrame(rafId)
+      window.clearTimeout(timer)
+      window.removeEventListener('scroll', onScroll)
+      collapseCleanupRef.current = null
+    }
+  }
+
+  useEffect(() => () => collapseCleanupRef.current?.(), [])
+
+  const handleToggle = () => {
+    if (expanded) {
+      const targetTop = getSectionScrollTop()
+      pinScrollDuringCollapse(targetTop)
+      setExpanded(false)
+      return
+    }
+
+    setExpanded(true)
+  }
+
   return (
-    <section className="border-x-2 border-skyline/50 bg-[#f9f9f9] px-4 py-16 sm:mx-auto sm:max-w-lg sm:border-x">
-      <Reveal className="text-center">
-        <p className="font-sans text-[#1F3A5F]/90 font-medium tracking-wide text-3xl">
-          {storyLead.eyebrow}
-        </p>
-        <h2 className="mt-2 font-script text-4xl text-neutral-900">
-          {storyLead.title}
-        </h2>
-      </Reveal>
+    <section
+      ref={sectionRef}
+      className="border-x-2 border-skyline/50 bg-[#f9f9f9] px-4 py-16 [overflow-anchor:none] sm:mx-auto sm:max-w-lg sm:border-x"
+    >
+      <div ref={headerRef}>
+        <Reveal className="text-center">
+          <p className="font-sans text-[#1F3A5F]/90 font-medium tracking-wide text-3xl">
+            {storyLead.eyebrow}
+          </p>
+          <h2 className="mt-2 font-script text-4xl text-neutral-900">
+            {storyLead.title}
+          </h2>
+        </Reveal>
+      </div>
 
       <div className="mx-auto mt-14 max-w-md space-y-16">
         {previewItem && <PreviewStoryImage item={previewItem} />}
@@ -155,9 +222,12 @@ export function StoryTimelineSection() {
               key="story-collapse"
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: 'auto', opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-              className="overflow-hidden"
+              exit={{ opacity: 0 }}
+              transition={{
+                height: { duration: 0.45, ease: [0.22, 1, 0.36, 1] },
+                opacity: { duration: 0.25, ease: [0.22, 1, 0.36, 1] },
+              }}
+              className="overflow-hidden [overflow-anchor:none]"
             >
               <div className="space-y-16 pt-10">
                 <PreviewStoryContent item={previewItem} />
@@ -174,7 +244,7 @@ export function StoryTimelineSection() {
         <div className="mt-12 flex justify-center">
           <button
             type="button"
-            onClick={() => setExpanded((v) => !v)}
+            onClick={handleToggle}
             aria-expanded={expanded}
             className="group inline-flex items-center gap-2 rounded-full border border-[#66b3ff]/60 bg-white/70 px-5 py-2 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-[#66b3ff]/80 shadow-sm shadow-black/5 transition hover:bg-[#66b3ff]/60 hover:text-white"
           >

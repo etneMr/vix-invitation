@@ -1,11 +1,18 @@
+import { useRef } from 'react'
 import { motion } from 'framer-motion'
 import { galleryPhotos } from '../data/wedding'
 import { CollapsibleSection } from '../components/CollapsibleSection'
 import { Reveal } from '../components/Reveal'
 
 export function GallerySection() {
+  const sectionRef = useRef<HTMLElement>(null)
+
+  const scrollToSectionTop = () => {
+    sectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
   return (
-    <section className="bg-white px-4 py-16">
+    <section ref={sectionRef} className="bg-white px-4 py-16">
       <Reveal className="mx-auto max-w-lg text-center">
         <p className="font-sans text-xs font-semibold uppercase tracking-[0.25em] text-[#66b3ff]/90   ">
           Khoảnh khắc
@@ -22,6 +29,7 @@ export function GallerySection() {
         previewCount={2}
         expandLabel="Xem thêm ảnh"
         collapseLabel="Thu gọn ảnh"
+        onCollapse={scrollToSectionTop}
       >
         {galleryPhotos.map((src, i) => (
           <Reveal key={src}>

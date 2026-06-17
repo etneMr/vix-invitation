@@ -58,7 +58,7 @@ export function HeroSection() {
           {couple.short}
         </motion.h1> */}
         <FloatingHearts />
-                {/* <Flourish />
+        {/* <Flourish />
                 <div className="relative z-[1] flex flex-wrap items-baseline justify-center gap-x-2 gap-y-0">
                   <span className="font-script text-5xl text-neutral-900 sm:text-3xl">
                     Save
@@ -71,21 +71,21 @@ export function HeroSection() {
                   </span>
                 </div>
                 <Flourish flip /> */}
-              
-                <img width={150} height={150} src='/saveTheDate.png' className='py-12 pt-0'></img>
-        
-                <p className = "text-[#1F3A5F]/90">
-                <p className="mt-5 font-script text-4xl sm:text-7xl ">
-                  {couple.displayPair1}
-                </p>
-                <p className="mt-2 font-script text-4xl sm:text-4xl">
-                  {couple.displayPair2}
-                </p>
-                <p className="mt-2 font-script text-4xl sm:text-7xl">
-                  {couple.displayPair3}
-                </p>
-                </p>
-        
+
+        <img width={150} height={150} src='/saveTheDate.png' className='py-12 pt-0'></img>
+
+        <div className="text-[#1F3A5F]/90">
+          <p className="mt-5 font-script text-4xl sm:text-7xl ">
+            {couple.displayPair1}
+          </p>
+          <p className="mt-2 font-script text-4xl sm:text-4xl">
+            {couple.displayPair2}
+          </p>
+          <p className="mt-2 font-script text-4xl sm:text-7xl">
+            {couple.displayPair3}
+          </p>
+        </div>
+
         <p className="mt-3 max-w-sm font-sans text-sm text-neutral-600">
           {hero.sub}
         </p>

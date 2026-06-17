@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { couple } from '../data/wedding'
 
@@ -9,23 +9,6 @@ type EnvelopeSplashProps = {
 export function EnvelopeSplash({ onOpenComplete }: EnvelopeSplashProps) {
   const [isOpened, setIsOpened] = useState(false)
   const [isHovered, setIsHovered] = useState(false)
-  const [activeImageIndex, setActiveImageIndex] = useState(0)
-
-  const coupleSlides = [
-  '/bg1.JPG',
-  '/bg2.JPG',
-  '/bg3.JPG',
-  ]
-
-  useEffect(() => {
-    const timer = window.setInterval(() => {
-      setActiveImageIndex((prev) => (prev + 1) % coupleSlides.length)
-    }, 9000)
-
-    return () => {
-      window.clearInterval(timer)
-    }
-  }, [coupleSlides.length])
 
   const handleOpen = () => {
     if (isOpened) return
@@ -34,23 +17,7 @@ export function EnvelopeSplash({ onOpenComplete }: EnvelopeSplashProps) {
   }
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-gradient-to-b from-rose-50 via-white to-amber-50 px-6">
-      <div className="absolute inset-0 overflow-hidden">
-        <AnimatePresence mode="wait">
-          <motion.img
-            key={`bg-${coupleSlides[activeImageIndex]}`}
-            src={coupleSlides[activeImageIndex]}
-            alt={couple.short}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1.8, ease: 'easeInOut' }}
-            className="absolute inset-0 h-full w-full object-cover"
-          />
-        </AnimatePresence>
-        <div className="absolute inset-0 bg-white/58 backdrop-blur-[1px]" />
-      </div>
-
+    <div className="fixed inset-0 z-[100] flex items-center justify-center px-6">
       <motion.button
         type="button"
         onClick={handleOpen}
@@ -109,22 +76,6 @@ export function EnvelopeSplash({ onOpenComplete }: EnvelopeSplashProps) {
               <p className="mt-1 text-xs text-neutral-500">Let&apos;s celebrate with us</p>
             </motion.div>
 
-            <div className="absolute inset-x-3 top-3 bottom-14 overflow-hidden rounded-md">
-              <AnimatePresence mode="wait">
-                <motion.img
-                  key={coupleSlides[activeImageIndex]}
-                  src={coupleSlides[activeImageIndex]}
-                  alt={couple.short}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 1.6, ease: 'easeInOut' }}
-                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700"
-                />
-              </AnimatePresence>
-              <div className="absolute inset-0 bg-gradient-to-t from-rose-900/20 via-transparent to-rose-100/15" />
-            </div>
-
             <motion.div
               style={{ transformOrigin: 'top center' }}
               className="absolute inset-x-0 top-[-110px] z-5 h-28 origin-top drop-shadow-[0_10px_14px_rgba(244,63,94,0.24)] [backface-visibility:visible] [transform-style:preserve-3d]"
@@ -138,7 +89,7 @@ export function EnvelopeSplash({ onOpenComplete }: EnvelopeSplashProps) {
             >
               <div className="h-full w-full bg-gradient-to-b from-rose-300 via-rose-200 to-rose-100 [clip-path:polygon(0_0,100%_0,50%_100%)]" />
             </motion.div>
-            <div className="absolute inset-0 z-1  0 bg-gradient-to-b from-rose-100/20 to-rose-300/35" />
+            <div className="absolute inset-0 z-10 bg-gradient-to-b from-rose-100/20 to-rose-300/35" />
             <div className="absolute inset-x-0 bottom-0 z-30 h-32 border border-rose-100 bg-rose-300 [clip-path:polygon(0_100%,100%_100%,50%_0)]" />
             <div className="absolute inset-y-0 left-0 z-30 w-1/2 border border-rose-100 bg-rose-300 [clip-path:polygon(0_0,100%_50%,0_100%)]" />
             <div className="absolute inset-y-0 right-0 z-30 w-1/2 bg-rose-300 [clip-path:polygon(100%_0,0_50%,100%_100%)]" />

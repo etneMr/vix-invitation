@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { galleryPhotos, images } from './data/wedding'
+import { couple } from './data/wedding'
 import { EnvelopeSplash } from './components/EnvelopeSplash'
 import { ScrollToTop } from './components/ScrollToTop'
 import { SoundControl } from './components/SoundControl'
@@ -18,33 +18,37 @@ import { FooterSection } from './sections/FooterSection'
 
 function App() {
   const [isEnvelopeOpen, setIsEnvelopeOpen] = useState(false)
-  const [activeBgIndex, setActiveBgIndex] = useState(0)
   const [isVideoPlaying, setIsVideoPlaying] = useState(false)
+  const [activeImageIndex, setActiveImageIndex] = useState(0)
 
-  const invitationBgSlides = [
-    images.countdownBg,
-    galleryPhotos[0],
-    galleryPhotos[2],
-    galleryPhotos[5],
+  const coupleSlides = [
+    '/bg1.JPG',
+    '/bg2.JPG',
+    '/bg3.JPG',
   ]
 
   useEffect(() => {
-    if (!isEnvelopeOpen) return
-
     const timer = window.setInterval(() => {
-      setActiveBgIndex((prev) => (prev + 1) % invitationBgSlides.length)
-    }, 7000)
+      setActiveImageIndex((prev) => (prev + 1) % coupleSlides.length)
+    }, 9000)
 
     return () => {
       window.clearInterval(timer)
     }
-  }, [isEnvelopeOpen, invitationBgSlides.length])
+  }, [coupleSlides.length])
+
+  useEffect(() => {
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual'
+    }
+  }, [])
 
   useEffect(() => {
     if (isEnvelopeOpen) return
 
     const { body, documentElement } = document
-    const scrollY = window.scrollY
+
+    window.scrollTo(0, 0)
 
     const previousBodyStyle = {
       overflow: body.style.overflow,
@@ -60,7 +64,7 @@ function App() {
 
     body.style.overflow = 'hidden'
     body.style.position = 'fixed'
-    body.style.top = `-${scrollY}px`
+    body.style.top = '0'
     body.style.width = '100%'
     body.style.touchAction = 'none'
     documentElement.style.overflow = 'hidden'
@@ -74,7 +78,7 @@ function App() {
       body.style.touchAction = previousBodyStyle.touchAction
       documentElement.style.overflow = previousHtmlStyle.overflow
       documentElement.style.scrollBehavior = previousHtmlStyle.scrollBehavior
-      window.scrollTo(0, scrollY)
+      window.scrollTo(0, 0)
     }
   }, [isEnvelopeOpen])
 
@@ -113,34 +117,22 @@ function App() {
   }, [])
 
   return (
-    <div className="relative min-h-svh bg-white font-sans text-neutral-800 antialiased">
-      <AnimatePresence mode="wait">
-        {isEnvelopeOpen && (
-          <motion.div
-            key="invitation-bg"
+    <div className="relative min-h-svh font-sans text-neutral-800 antialiased">
+      <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={`couple-bg-${coupleSlides[activeImageIndex]}`}
+            src={coupleSlides[activeImageIndex]}
+            alt={couple.short}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.5, ease: 'easeOut' }}
-            className="pointer-events-none fixed inset-0 z-0 overflow-hidden"
-          >
-            <AnimatePresence mode="wait">
-              <motion.img
-                key={`invitation-bg-slide-${activeBgIndex}`}
-                src={invitationBgSlides[activeBgIndex]}
-                alt=""
-                initial={{ opacity: 0, scale: 1.08 }}
-                animate={{ opacity: 1, scale: 1.14 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 2, ease: 'easeInOut' }}
-                className="absolute inset-0 h-full w-full object-cover blur-md"
-              />
-            </AnimatePresence>
-            <div className="absolute inset-0 bg-white/65 backdrop-blur-xl" />
-            <div className="absolute inset-0 bg-gradient-to-b from-rose-50/70 via-white/72 to-amber-50/75" />
-          </motion.div>
-        )}
-      </AnimatePresence>
+            transition={{ duration: 1.8, ease: 'easeInOut' }}
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        </AnimatePresence>
+        <div className="absolute inset-0 bg-white/58 backdrop-blur-[1px]" />
+      </div>
       <AnimatePresence>
         {!isEnvelopeOpen && (
           <motion.div
