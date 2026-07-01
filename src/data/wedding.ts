@@ -30,18 +30,18 @@
   export const family = {
     groom: {
       title: 'NHÀ TRAI',
-      lines: ['Ông: Trương Văn Tiên', 'Bà: Nguyễn Thị Hết'],
+      lines: ['Ông: Trương Văn Tiên','\u00A0', 'Bà: Nguyễn Thị Hết'],
     },
     bride: {
       title: 'NHÀ GÁI',
-      lines: ['Ông: Nguyễn Tuấn Việt', 'Bà: Nguyễn Ngọc Thanh Ngân'],
+      lines: ['Ông: Nguyễn Văn Thanh', '(Cố phụ)', 'Bà: Nguyễn Thị Thới'],
     },
   }
 
   export const invite = {
     kicker: 'TRÂN TRỌNG KÍNH MỜI',
     line1: 'Bạn cùng gia đình',
-    line2: '(Tới dự Lễ Thành Hôn của hai con chúng tôi)',
+    line2: '(Tới dự Lễ Thành Hôn của chúng mình)',
   }
 
   /** Lễ tại nhà trai (buổi sáng) — khác với tiệc nhà hàng buổi tối */
@@ -88,7 +88,7 @@
     {
       date: '01 tháng 07, 2023',
       title: 'Lần đầu gặp',
-      body: 'Chúng mình đã gặp nhau thông qua Facebook, cùng với những sự chân thành chúng mình đã tìm hiểu về nhau ',
+      body: 'Giữa vô vàn những cuộc gặp gỡ, Facebook Dating đã trở thành nơi kết nối hai chúng mình. Bằng sự chân thành và những cuộc trò chuyện không ngừng, chúng mình dần bước vào cuộc sống của nhau một cách thật tự nhiên.',
       image:
         '/retro.png',
       layout: 'circle',
@@ -96,29 +96,29 @@
       imageFirst: true,
     },
     {
-      date: '02 tháng 11, 2020',
-      title: 'Anh ngỏ lời yêu',
-      body: 'Biển xanh, cát trắng và những lời chân thành — chúng mình chọn cùng nhau viết tiếp những trang mới.',
+      date: '24 tháng 09, 2023',
+      title: 'Nơi tình yêu bắt đầu',
+      body: 'Trong một góc nhỏ của trung tâm mua sắm, chúng mình đã có buổi hẹn đầu tiên. Nơi ấy lưu giữ những bức ảnh đầu tiên của hai đứa, và cũng là nơi anh ngỏ lời, mở đầu cho câu chuyện tình yêu của chúng mình.',
       image:
-        'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&h=600&fit=crop&q=80',
+        '/story-1.jpg',
       layout: 'circle',
       leaves: 'left',
     },
     {
-      date: '02 tháng 11, 2020',
-      title: 'Cùng nhau đồng hành',
-      body: 'Biển xanh, cát trắng và những lời chân thành — chúng mình chọn cùng nhau viết tiếp những trang mới.',
+      date: '08 tháng 10, 2025',
+      title: 'Chương mới, câu chuyện mới',
+      body: 'Dưới bầu trời đầy sao, giữa biển xanh, cát trắng và ánh trăng dịu dàng. Anh đã cầu hôn em bằng một chiếc nhẫn giấy chứa đựng tất cả sự chân thành và lời hứa về một tương lai, nơi chúng mình sẽ trở thành điều đặc biệt nhất trong cuộc đời của nhau.',
       image:
-        'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&h=600&fit=crop&q=80',
+        '/story-2.jpg',
       layout: 'circle',
-      leaves: 'left',
+      leaves: 'right',
     },
     {
-      date: '15 tháng 12, 2026',
-      title: 'Đám cưới',
-      body: 'Hôm nay chúng mình chính thức về chung một nhà. Cảm ơn bạn đã là một phần trong kỷ niệm đẹp này.',
+      date: '12 tháng 12, 2026',
+      title: 'Bắt đầu hành trình',
+      body: 'Thế là chúng mình sẽ cùng nhau viết nên chương truyện mới, những kỉ niệm cùng nhau. Cảm ơn gia đình, bạn bè và những người thân yêu đã luôn đồng hành, yêu thương, và có mặt để chứng kiến khoảnh khắc ý nghĩa này của chúng mình. Sự hiện diện của mọi người là món quà quý giá nhất dành cho tụi mình. Trân quý !',
       image:
-        'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=1200&h=700&fit=crop&q=80',
+        '/story-3.jpg',
       layout: 'wide',
       leaves: null,
     },
@@ -126,19 +126,19 @@
 
   /** Album — nhiều ảnh như mockup gallery */
   export const galleryPhotos = [
-    'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&h=600&fit=crop&q=80',
-    'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&h=600&fit=crop&q=80',
-    'https://images.unsplash.com/photo-1529636798458-92182e662485?w=800&h=600&fit=crop&q=80',
-    'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=800&h=600&fit=crop&q=80',
-    'https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=800&h=600&fit=crop&q=80',
-    'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=600&fit=crop&q=80',
+  '/list-1.JPG',
+  '/list-2.JPG',
+  '/list-3.jpg',
+  '/list-4.jpg',
+  '/list-5.jpg',
+  '/list-6.jpg',
   ]
 
   export const schedule = [
     {
       title: 'Lễ rước dâu',
       image:
-        'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=500&h=500&fit=crop&q=80',
+        '/lecuoi.JPG',
       dateLine: 'Thứ Bảy, 12 tháng 12, 2026',
       time: '1:00 chiều – 4:00 chiều',
       venue: 'Tại gia đình nhà Trai',
@@ -149,7 +149,7 @@
     {
       title: 'Tiệc cưới',
       image:
-        'https://images.unsplash.com/photo-1529636798458-92182e662485?w=500&h=500&fit=crop&q=80',
+        'damcuoi.JPG',
       dateLine: 'Thứ Bảy, 12 tháng 12, 2026',
       time: '6:00 chiều – 9:00 tối',
       venue: 'Nhà hàng tiệc cưới Luxury',
@@ -227,9 +227,9 @@
     coupleOverlapLeft:
       'chure1-2.png',
     coupleOverlapRight:
-      '/codau1-2.png',
+      '/codau1-2.JPG',
     bouquet:
-      '/boquet.png',
+      '/boquet.JPG',
     videoCover:
       '/wedding-vid.mp4',
   }

@@ -57,7 +57,7 @@ function CirclePhoto({
         whileHover={{ scale: 1.05 }}
         transition={{ type: 'spring', stiffness: 280, damping: 20 }}
       >
-        <img src={image} alt="" className="h-full w-full object-cover" />
+        <img src={image} alt="" className="h-35 w-35 object-center" />
       </motion.div>
     </div>
   )

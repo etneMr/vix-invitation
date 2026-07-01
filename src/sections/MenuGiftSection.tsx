@@ -31,7 +31,7 @@ function QrPlaceholder({ qrCodeUrl }: { qrCodeUrl: string }) {
 
 export function MenuGiftSection() {
   return (
-    <section className="relative overflow-hidden border-x-2 border-skyline/50 bg-white px-5 pb-20 pt-4 sm:mx-auto sm:max-w-lg sm:border-x">
+    <section className="relative overflow-hidden border-x-2 border-skyline/50 bg-white px-5 pb-20 pt-0 sm:mx-auto sm:max-w-lg sm:border-x">
       <FoliageCorner position="tr" />
 {/* 
       <Reveal className="relative z-[1] text-center">

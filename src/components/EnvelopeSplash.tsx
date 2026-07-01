@@ -33,7 +33,9 @@ export function EnvelopeSplash({ onOpenComplete }: EnvelopeSplashProps) {
         className="group relative z-10 w-full max-w-sm cursor-pointer focus:outline-none disabled:cursor-default"
       >
         <motion.div
-          animate={isOpened ? { scale: 0.96, y: 16, opacity: 0 } : { scale: 1, y: 0, opacity: 1 }}
+          animate={isOpened ? { scale: 0.96, y: 16, opacity: 0 } : { scale: 1, y: 0, opacity: 1
+            
+           }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           className="relative pt-20 transition-transform duration-500"
         >
@@ -46,7 +48,7 @@ export function EnvelopeSplash({ onOpenComplete }: EnvelopeSplashProps) {
                   : { rotate: 0, boxShadow: '0 22px 44px rgba(251, 113, 133, 0.3)' }
             }
             transition={{ duration: 0.55, ease: 'easeOut' }}
-            className="relative h-56 rounded-2xl border border-rose-200 bg-rose-200 [perspective:1200px]"
+            className="relative h-56 rounded-2xl border border-blue-200 bg-rose-200 [perspective:1200px]"
           >
             <motion.div
               animate={
@@ -69,10 +71,10 @@ export function EnvelopeSplash({ onOpenComplete }: EnvelopeSplashProps) {
                     : { duration: 0.4, ease: 'easeOut' }
               }
               style={{ transformOrigin: 'bottom center', zIndex: 10 }}
-              className="absolute inset-x-6 top-0 rounded-md border-2 border-amber-100 bg-amber-50/95 px-6 py-7 text-center shadow-lg shadow-rose-100/70"
+              className="absolute inset-x-6 top-0 rounded-md border-2 border-amber-100 bg-amber-50/95 px-6 py-7 text-center shadow-lg shadow-blue-100/70"
             >
-              <p className="text-[11px] uppercase tracking-[0.22em] text-rose-400">Wedding Invitation</p>
-              <p className="mt-2 font-script text-4xl text-rose-500">{couple.short}</p>
+              <p className="text-[11px] uppercase tracking-[0.22em] text-blue-400">Wedding Invitation</p>
+              <p className="mt-2 font-script text-4xl text-blue-500">{couple.short}</p>
               <p className="mt-1 text-xs text-neutral-500">Let&apos;s celebrate with us</p>
             </motion.div>
 
@@ -80,19 +82,19 @@ export function EnvelopeSplash({ onOpenComplete }: EnvelopeSplashProps) {
               style={{ transformOrigin: 'top center' }}
               className="absolute inset-x-0 top-[-110px] z-5 h-28 origin-top drop-shadow-[0_10px_14px_rgba(244,63,94,0.24)] [backface-visibility:visible] [transform-style:preserve-3d]"
             >
-              <div className="h-full w-full bg-gradient-to-b from-rose-300 via-rose-400 to-rose-500 [clip-path:polygon(0_100%,100%_100%,50%_0)]" />
+              <div className="h-full w-full bg-gradient-to-b from-blue-300 via-blue-400 to-blue-500 [clip-path:polygon(0_100%,100%_100%,50%_0)]" />
             </motion.div>
 
             <motion.div
               style={{ transformOrigin: 'top center' }}
               className="absolute inset-x-0 top-0 z-5 h-28 origin-top drop-shadow-[0_10px_14px_rgba(244,63,94,0.24)] [backface-visibility:visible] [transform-style:preserve-3d]"
             >
-              <div className="h-full w-full bg-gradient-to-b from-rose-300 via-rose-200 to-rose-100 [clip-path:polygon(0_0,100%_0,50%_100%)]" />
+              <div className="h-full w-full bg-gradient-to-b from-blue-300 via-blue-200 to-blue-100 [clip-path:polygon(0_0,100%_0,50%_100%)]" />
             </motion.div>
-            <div className="absolute inset-0 z-10 bg-gradient-to-b from-rose-100/20 to-rose-300/35" />
-            <div className="absolute inset-x-0 bottom-0 z-30 h-32 border border-rose-100 bg-rose-300 [clip-path:polygon(0_100%,100%_100%,50%_0)]" />
-            <div className="absolute inset-y-0 left-0 z-30 w-1/2 border border-rose-100 bg-rose-300 [clip-path:polygon(0_0,100%_50%,0_100%)]" />
-            <div className="absolute inset-y-0 right-0 z-30 w-1/2 bg-rose-300 [clip-path:polygon(100%_0,0_50%,100%_100%)]" />
+            <div className="absolute inset-0 z-10 bg-gradient-to-b from-blue-200/20 to-blue-400/35" />
+            <div className="absolute inset-x-0 bottom-0 z-30 h-32 border border-blue-200 bg-blue-400 [clip-path:polygon(0_100%,100%_100%,50%_0)]" />
+            <div className="absolute inset-y-0 left-0 z-30 w-1/2 border border-blue-200 bg-blue-400 [clip-path:polygon(0_0,100%_50%,0_100%)]" />
+            <div className="absolute inset-y-0 right-0 z-30 w-1/2 bg-blue-400 [clip-path:polygon(100%_0,0_50%,100%_100%)]" />
             <motion.div
               animate={isHovered && !isOpened ? { opacity: 1 } : { opacity: 0 }}
               transition={{ duration: 0.45, ease: 'easeOut' }}
@@ -101,7 +103,7 @@ export function EnvelopeSplash({ onOpenComplete }: EnvelopeSplashProps) {
             <motion.div
               animate={isOpened ? { opacity: 1 } : { opacity: 0 }}
               transition={{ duration: 0.3, delay: 0.72, ease: 'easeOut' }}
-              className="pointer-events-none absolute inset-x-8 top-2 z-0 h-16 rounded-b-full bg-gradient-to-b from-rose-800/14 to-transparent blur-md"
+              className="pointer-events-none absolute inset-x-8 top-2 z-0 h-16 rounded-b-full bg-gradient-to-b from-blue-800/14 to-transparent blur-md"
             />
             <AnimatePresence>
               {isOpened && (
@@ -139,8 +141,8 @@ export function EnvelopeSplash({ onOpenComplete }: EnvelopeSplashProps) {
           </motion.div>
         </motion.div>
 
-        <p className="mt-8 text-center text-xs uppercase tracking-[0.24em] text-neutral-500">
-          {isOpened ? 'Đang mở thiệp...' : 'Click vào phong bì'}
+        <p className="mt-8 text-center text-xs uppercase tracking-[0.24em] text-neutral-500 text-black-500">
+          {isOpened ? 'Đang mở thiệp...' : 'Click vào đây'}
         </p>
       </motion.button>
     </div>
