@@ -227,9 +227,9 @@
     coupleOverlapLeft:
       'chure1-2.png',
     coupleOverlapRight:
-      '/codau1-2.JPG',
+      '/public/codau1-2.JPG',
     bouquet:
-      '/boquet.JPG',
+      '/public/boquet.JPG',
     videoCover:
       '/wedding-vid.mp4',
   }
